@@ -73,17 +73,95 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\frmLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmLopHoc.Designer.cs">
+      <DependentUpon>frmLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmSinhVien.Designer.cs">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmReportBangDiemLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmReportBangDiemLTC.Designer.cs">
+      <DependentUpon>frmReportBangDiemLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmReportDSHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmReportDSHocPhi.Designer.cs">
+      <DependentUpon>frmReportDSHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmReportBangDiemSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmReportBangDiemSV.Designer.cs">
+      <DependentUpon>frmReportBangDiemSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmReportBangDiemTongKet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmReportBangDiemTongKet.Designer.cs">
+      <DependentUpon>frmReportBangDiemTongKet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmReportDSSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmReportDSSV.Designer.cs">
+      <DependentUpon>frmReportDSSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmReportDSLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmReportDSLTC.Designer.cs">
+      <DependentUpon>frmReportDSLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmXemDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmXemDiem.Designer.cs">
+      <DependentUpon>frmXemDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\frmLopHoc.cs">
+    <Compile Include="views\frmHocPhi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\frmLopHoc.Designer.cs">
-      <DependentUpon>frmLopHoc.cs</DependentUpon>
+    <Compile Include="views\frmHocPhi.Designer.cs">
+      <DependentUpon>frmHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmDangKyLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmDangKyLTC.Designer.cs">
+      <DependentUpon>frmDangKyLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmNhapDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmNhapDiem.Designer.cs">
+      <DependentUpon>frmNhapDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmLopTinChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmLopTinChi.Designer.cs">
+      <DependentUpon>frmLopTinChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\frmMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmMonHoc.Designer.cs">
+      <DependentUpon>frmMonHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="views\frmMain.cs">
       <SubType>Form</SubType>
@@ -101,11 +179,50 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\frmLopHoc.resx">
+      <DependentUpon>frmLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmSinhVien.resx">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmReportBangDiemLTC.resx">
+      <DependentUpon>frmReportBangDiemLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmReportDSHocPhi.resx">
+      <DependentUpon>frmReportDSHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmReportBangDiemSV.resx">
+      <DependentUpon>frmReportBangDiemSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmReportBangDiemTongKet.resx">
+      <DependentUpon>frmReportBangDiemTongKet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmReportDSSV.resx">
+      <DependentUpon>frmReportDSSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmReportDSLTC.resx">
+      <DependentUpon>frmReportDSLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmXemDiem.resx">
+      <DependentUpon>frmXemDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\frmLopHoc.resx">
-      <DependentUpon>frmLopHoc.cs</DependentUpon>
+    <EmbeddedResource Include="views\frmHocPhi.resx">
+      <DependentUpon>frmHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmDangKyLTC.resx">
+      <DependentUpon>frmDangKyLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmNhapDiem.resx">
+      <DependentUpon>frmNhapDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmLopTinChi.resx">
+      <DependentUpon>frmLopTinChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmMonHoc.resx">
+      <DependentUpon>frmMonHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

@@ -1,5 +1,4 @@
-﻿using QuanLyDiemSinhVien.views;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -29,8 +28,16 @@ namespace QuanLyDiemSinhVien
         public static int mPhongBan = 0;
 
         public static BindingSource bds_dspm = new BindingSource(); // giữ danh sách phân mảnh khi đăng nhập
+        public static views.frmDangNhap frmDangNhap;
         public static views.frmMain frmChinh;
+        public static views.frmSinhVien frmSinhVien;
         public static views.frmLopHoc frmLopHoc;
+        public static views.frmMonHoc frmMonHoc;
+        public static views.frmLopTinChi frmLopTinChi;
+        public static views.frmNhapDiem frmNhapDiem;
+        public static views.frmHocPhi frmHocPhi;
+        public static views.frmDangKyLTC frmDangKyLTC;
+        public static views.frmXemDiem frmXemDiem;
 
         public static int KetNoi()
         {
@@ -106,9 +113,7 @@ namespace QuanLyDiemSinhVien
             }
             catch (SqlException ex)
             {
-                if (ex.Message.Contains("Error converting data type varchar to int"))
-                    MessageBox.Show("Bạn format Cell lại cột \"Ngày Thi\" qua kiểu Number hoặc mở File Excel.");
-                else MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
                 conn.Close();
                 return ex.State; // trang thai lỗi gởi từ RAISERROR trong SQL Server qua
             }
@@ -122,7 +127,9 @@ namespace QuanLyDiemSinhVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            // frmDangNhap = new views.frmDangNhap();
+            frmChinh = new views.frmMain();
+            Application.Run(frmChinh);
         }
     }
 }
