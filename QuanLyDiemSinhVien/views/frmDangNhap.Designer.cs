@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbPhongBan = new System.Windows.Forms.ComboBox();
+            this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.txtTenDangNhap = new DevExpress.XtraEditors.TextEdit();
             this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.chkHienMatKhau = new System.Windows.Forms.CheckBox();
@@ -74,15 +74,16 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật Khẩu";
             // 
-            // cmbPhongBan
+            // cmbKhoa
             // 
-            this.cmbPhongBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPhongBan.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.cmbPhongBan.FormattingEnabled = true;
-            this.cmbPhongBan.Location = new System.Drawing.Point(203, 190);
-            this.cmbPhongBan.Name = "cmbPhongBan";
-            this.cmbPhongBan.Size = new System.Drawing.Size(225, 24);
-            this.cmbPhongBan.TabIndex = 3;
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKhoa.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cmbKhoa.FormattingEnabled = true;
+            this.cmbKhoa.Location = new System.Drawing.Point(203, 190);
+            this.cmbKhoa.Name = "cmbKhoa";
+            this.cmbKhoa.Size = new System.Drawing.Size(225, 24);
+            this.cmbKhoa.TabIndex = 3;
+            this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
             // txtTenDangNhap
             // 
@@ -124,6 +125,7 @@
             this.btnDangNhap.TabIndex = 7;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnThoat
             // 
@@ -157,13 +159,14 @@
             this.Controls.Add(this.chkHienMatKhau);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenDangNhap);
-            this.Controls.Add(this.cmbPhongBan);
+            this.Controls.Add(this.cmbKhoa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -177,7 +180,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbPhongBan;
+        private System.Windows.Forms.ComboBox cmbKhoa;
         private DevExpress.XtraEditors.TextEdit txtTenDangNhap;
         private DevExpress.XtraEditors.TextEdit txtMatKhau;
         private System.Windows.Forms.CheckBox chkHienMatKhau;

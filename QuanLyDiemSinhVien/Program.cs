@@ -9,15 +9,16 @@ namespace QuanLyDiemSinhVien
     {
         public static SqlConnection conn = new SqlConnection();
         public static string connstr;
-        public static string constr_publisher = "Data Source=DESKTOP-UHICCE5;Initial Catalog=QLDSV_HTC;Integrated Security=True;";
+        public static string constr_publisher = "Data Source=DESKTOP-UHICCE5;Initial Catalog=QLDSV_HTC;User ID=sa;Password='123456789';";
 
         public static SqlDataReader myReader;
         public static String servername = "";
         public static String username = "";
         public static String mlogin = "";
         public static String password = "";
+        public static String passSV = "";
 
-        public static String database = "QLDSV_TC";
+        public static String database = "QLDSV_HTC";
         public static String remoteLogin = "HTKN";
         public static String remotePass = "123456789";
 
@@ -30,7 +31,6 @@ namespace QuanLyDiemSinhVien
         public static BindingSource bds_dspm = new BindingSource(); // giữ danh sách phân mảnh khi đăng nhập
         public static views.frmDangNhap frmDangNhap;
         public static views.frmMain frmChinh;
-        public static views.frmSinhVien frmSinhVien;
         public static views.frmLopHoc frmLopHoc;
         public static views.frmMonHoc frmMonHoc;
         public static views.frmLopTinChi frmLopTinChi;
@@ -55,7 +55,7 @@ namespace QuanLyDiemSinhVien
 
             catch (Exception e)
             {
-                MessageBox.Show("Vui lòng xem lại user name và password\n" + e.Message, "Lỗi đăng nhập", MessageBoxButtons.OK);
+                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu.\nVui lòng xem lại user name và password\n" + e.Message, "Lỗi đăng nhập", MessageBoxButtons.OK);
                 return 0;
             }
         }
@@ -127,9 +127,9 @@ namespace QuanLyDiemSinhVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // frmDangNhap = new views.frmDangNhap();
-            frmChinh = new views.frmMain();
-            Application.Run(frmChinh);
+            frmDangNhap = new views.frmDangNhap();
+            // frmChinh = new views.frmMain();
+            Application.Run(frmDangNhap);
         }
     }
 }

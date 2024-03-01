@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using System;
 using System.Windows.Forms;
 
@@ -9,6 +10,40 @@ namespace QuanLyDiemSinhVien.views
         public frmMain()
         {
             InitializeComponent();
+            if (Program.mGroup.Equals("PGV"))
+            {
+                ribbonPageQuanLyKhoa_PGV.Visible = true;
+                ribbonPageQuanLyKhoa_PGV.Enabled = true;
+                reportPagePGV_Khoa.Visible = true;
+                reportPagePGV_Khoa.Enabled = true;
+                btnTaoLogin.Enabled = true;
+                ribbon.SelectedPage = ribbonPageQuanLy;
+            }
+            else if (Program.mGroup.Equals("KHOA"))
+            {
+                ribbonPageQuanLyKhoa_PGV.Visible = true;
+                ribbonPageQuanLyKhoa_PGV.Enabled = true;
+                reportPagePGV_Khoa.Visible = true;
+                reportPagePGV_Khoa.Enabled = true;
+                btnTaoLogin.Enabled = true;
+                ribbon.SelectedPage = ribbonPageQuanLy;
+            }
+            else if (Program.mGroup.Equals("SINHVIEN"))
+            {
+                ribbonPageSinhVien.Visible = true;
+                ribbonPageBaoCao.Visible = false;
+                ribbonPageQuanLy.Visible = false;
+                btnTaoLogin.Visibility = BarItemVisibility.Never;
+                ribbon.SelectedPage = ribbonPageSinhVien;
+            }
+            else if (Program.mGroup.Equals("PKT"))
+            {
+                ribbonQuanLyPKT.Visible = true;
+                ribbonQuanLyPKT.Enabled = true;
+                reportPagePKT.Visible = true;
+                reportPagePKT.Enabled = true;
+                btnTaoLogin.Enabled = true;
+            }
         }
 
         private Form CheckExists(Type ftype)
@@ -37,18 +72,6 @@ namespace QuanLyDiemSinhVien.views
                 Program.frmLopHoc = new frmLopHoc();
                 Program.frmLopHoc.MdiParent = this;
                 Program.frmLopHoc.Show();
-            }
-        }
-
-        private void btnSinhVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frmSinhVien));
-            if (frm != null) frm.Activate();
-            else
-            {
-                Program.frmSinhVien = new frmSinhVien();
-                Program.frmSinhVien.MdiParent = this;
-                Program.frmSinhVien.Show();
             }
         }
 
