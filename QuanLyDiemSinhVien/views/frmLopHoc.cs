@@ -10,8 +10,8 @@
         private void frmLopHoc_Load(object sender, System.EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.SINHVIEN' table. You can move, or remove it, as needed.
-            this.sINHVIENTableAdapter.Fill(this.qLDSV_TCDataSet.SINHVIEN);
-            this.lOPTableAdapter.Fill(this.qLDSV_TCDataSet.LOP);
+            this.sINHVIENTableAdapter.Fill(this.qLDSV_HTCDataSet.SINHVIEN);
+            this.lOPTableAdapter.Fill(this.qLDSV_HTCDataSet.LOP);
             //qLDSV_TCDataSet.EnforceConstraints = false;
 
             //this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;

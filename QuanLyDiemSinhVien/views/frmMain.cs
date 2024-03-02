@@ -16,7 +16,7 @@ namespace QuanLyDiemSinhVien.views
                 ribbonPageQuanLyKhoa_PGV.Enabled = true;
                 reportPagePGV_Khoa.Visible = true;
                 reportPagePGV_Khoa.Enabled = true;
-                btnTaoLogin.Enabled = true;
+                btnTaoNguoiDung.Enabled = true;
                 ribbon.SelectedPage = ribbonPageQuanLy;
             }
             else if (Program.mGroup.Equals("KHOA"))
@@ -25,7 +25,7 @@ namespace QuanLyDiemSinhVien.views
                 ribbonPageQuanLyKhoa_PGV.Enabled = true;
                 reportPagePGV_Khoa.Visible = true;
                 reportPagePGV_Khoa.Enabled = true;
-                btnTaoLogin.Enabled = true;
+                btnTaoNguoiDung.Enabled = true;
                 ribbon.SelectedPage = ribbonPageQuanLy;
             }
             else if (Program.mGroup.Equals("SINHVIEN"))
@@ -33,7 +33,7 @@ namespace QuanLyDiemSinhVien.views
                 ribbonPageSinhVien.Visible = true;
                 ribbonPageBaoCao.Visible = false;
                 ribbonPageQuanLy.Visible = false;
-                btnTaoLogin.Visibility = BarItemVisibility.Never;
+                btnTaoNguoiDung.Visibility = BarItemVisibility.Never;
                 ribbon.SelectedPage = ribbonPageSinhVien;
             }
             else if (Program.mGroup.Equals("PKT"))
@@ -42,7 +42,7 @@ namespace QuanLyDiemSinhVien.views
                 ribbonQuanLyPKT.Enabled = true;
                 reportPagePKT.Visible = true;
                 reportPagePKT.Enabled = true;
-                btnTaoLogin.Enabled = true;
+                btnTaoNguoiDung.Enabled = true;
             }
         }
 
@@ -233,5 +233,19 @@ namespace QuanLyDiemSinhVien.views
                 frmHocPhi.Show();
             }
         }
+
+        private void btnTaoNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(frmReportDSHocPhi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmTaoNguoiDung frmTaoNguoiDung = new frmTaoNguoiDung();
+                frmTaoNguoiDung.MdiParent = this;
+                frmTaoNguoiDung.Show();
+            }
+        }
+
+
     }
 }

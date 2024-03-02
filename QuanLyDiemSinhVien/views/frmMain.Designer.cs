@@ -44,7 +44,7 @@
             this.btnBangDiemTongKet = new DevExpress.XtraBars.BarButtonItem();
             this.btnBangDiemSinhVien = new DevExpress.XtraBars.BarButtonItem();
             this.btnDanhSachHocPhi = new DevExpress.XtraBars.BarButtonItem();
-            this.btnTaoLogin = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTaoNguoiDung = new DevExpress.XtraBars.BarButtonItem();
             this.btnDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageQuanLy = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -86,11 +86,11 @@
             this.btnBangDiemTongKet,
             this.btnBangDiemSinhVien,
             this.btnDanhSachHocPhi,
-            this.btnTaoLogin,
+            this.btnTaoNguoiDung,
             this.btnDoiMatKhau,
             this.btnDangXuat});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 18;
+            this.ribbon.MaxItemId = 19;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageQuanLy,
@@ -216,14 +216,15 @@
             this.btnDanhSachHocPhi.Name = "btnDanhSachHocPhi";
             this.btnDanhSachHocPhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDanhSachHocPhi_ItemClick);
             // 
-            // btnTaoLogin
+            // btnTaoNguoiDung
             // 
-            this.btnTaoLogin.Caption = "Tạo Người Dùng";
-            this.btnTaoLogin.Enabled = false;
-            this.btnTaoLogin.Id = 14;
-            this.btnTaoLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoNguoiDung.ImageOptions.Image")));
-            this.btnTaoLogin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTaoNguoiDung.ImageOptions.LargeImage")));
-            this.btnTaoLogin.Name = "btnTaoLogin";
+            this.btnTaoNguoiDung.Caption = "Tạo Người Dùng";
+            this.btnTaoNguoiDung.Enabled = false;
+            this.btnTaoNguoiDung.Id = 14;
+            this.btnTaoNguoiDung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoNguoiDung.ImageOptions.Image")));
+            this.btnTaoNguoiDung.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnTaoNguoiDung.ImageOptions.LargeImage")));
+            this.btnTaoNguoiDung.Name = "btnTaoNguoiDung";
+            this.btnTaoNguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTaoNguoiDung_ItemClick);
             // 
             // btnDoiMatKhau
             // 
@@ -315,7 +316,7 @@
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnTaoLogin);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnTaoNguoiDung);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnDoiMatKhau);
             this.ribbonPageGroup4.ItemLinks.Add(this.btnDangXuat);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
@@ -403,7 +404,7 @@
         private DevExpress.XtraBars.BarButtonItem btnBangDiemSinhVien;
         private DevExpress.XtraBars.BarButtonItem btnDanhSachHocPhi;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup reportPagePKT;
-        private DevExpress.XtraBars.BarButtonItem btnTaoLogin;
+        private DevExpress.XtraBars.BarButtonItem btnTaoNguoiDung;
         private DevExpress.XtraBars.BarButtonItem btnDoiMatKhau;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
         private System.Windows.Forms.StatusStrip statusBar;
