@@ -119,6 +119,16 @@ namespace QuanLyDiemSinhVien
             }
         }
 
+        public static int CheckDataHelper(string query)
+        {
+            SqlDataReader dataReader = Program.ExecSqlDataReader(query);
+            if (dataReader == null) return -1;
+            dataReader.Read();
+            int result = dataReader.GetInt32(0);
+            dataReader.Close();
+            return result;
+        }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

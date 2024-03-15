@@ -128,6 +128,7 @@
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(369, 27);
             this.cmbKhoa.TabIndex = 0;
+            this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
             // barLargeButtonItem2
             // 

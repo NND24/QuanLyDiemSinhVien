@@ -205,5 +205,31 @@ namespace QuanLyDiemSinhVien.views
                 loadTableDK();
             }
         }
+
+        private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbKhoa.SelectedItem.ToString() == "System.Data.DataRowView") return;
+
+            Program.servername = cmbKhoa.SelectedItem.ToString();
+            if (cmbKhoa.SelectedIndex != Program.mPhongBan)
+            {
+                Program.mlogin = Program.remoteLogin;
+                Program.password = Program.remotePass;
+            }
+            else
+            {
+                Program.mlogin = Program.mloginDN;
+                Program.password = Program.passDN;
+            }
+
+            if (Program.KetNoi() == 0)
+            {
+                MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+            }
+            else
+            {
+                loadCmbNienKhoa();
+            }
+        }
     }
 }

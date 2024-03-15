@@ -123,10 +123,11 @@ namespace QuanLyDiemSinhVien.views
                 Program.mHoten = Program.myReader.GetString(1);
                 Program.mGroup = Program.myReader.GetString(2);
                 Program.myReader.Close();
+
                 Program.frmChinh = new frmMain();
-                //Program.frmChinh.StatusBar.Text = "Mã: " + Program.username.ToUpper();
-                //Program.frmChinh.StatusBar.Text = "Tên: " + Program.mHoten;
-                //Program.frmChinh.StatusBar.Text = "Quyền: " + Program.mGroup;
+                Program.frmChinh.statusMa.Text = "MÃ: " + Program.username.ToUpper();
+                Program.frmChinh.statusTen.Text = "TÊN: " + Program.mHoten;
+                Program.frmChinh.statusKhoa.Text = "QUYỀN: " + Program.mGroup;
 
 
                 this.Visible = false;

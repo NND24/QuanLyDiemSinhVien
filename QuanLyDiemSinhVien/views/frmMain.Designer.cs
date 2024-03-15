@@ -408,9 +408,9 @@
         private DevExpress.XtraBars.BarButtonItem btnDoiMatKhau;
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
         private System.Windows.Forms.StatusStrip statusBar;
-        private System.Windows.Forms.ToolStripStatusLabel statusMa;
-        private System.Windows.Forms.ToolStripStatusLabel statusTen;
-        private System.Windows.Forms.ToolStripStatusLabel statusKhoa;
+        public System.Windows.Forms.ToolStripStatusLabel statusMa;
+        public System.Windows.Forms.ToolStripStatusLabel statusTen;
+        public System.Windows.Forms.ToolStripStatusLabel statusKhoa;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
