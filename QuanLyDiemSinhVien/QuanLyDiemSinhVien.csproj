@@ -48,17 +48,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v22.2" />
+    <Reference Include="DevExpress.Charts.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v22.2" />
     <Reference Include="DevExpress.Data.v22.2" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v22.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Export, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v22.2" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.2" />
     <Reference Include="DevExpress.Sparkline.v22.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2" />
     <Reference Include="DevExpress.Drawing.v22.2" />
+    <Reference Include="DevExpress.XtraGauges.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.2.Extensions, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -77,6 +91,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLDSV_HTCDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_HTCDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="reports\ReportDSLopTinChi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\ReportDSLopTinChi.Designer.cs">
+      <DependentUpon>ReportDSLopTinChi.cs</DependentUpon>
     </Compile>
     <Compile Include="views\frmLopHoc.cs">
       <SubType>Form</SubType>
@@ -108,17 +133,17 @@
     <Compile Include="views\frmReportBangDiemTongKet.Designer.cs">
       <DependentUpon>frmReportBangDiemTongKet.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\frmReportDSSV.cs">
+    <Compile Include="views\frmReportDSSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\frmReportDSSV.Designer.cs">
-      <DependentUpon>frmReportDSSV.cs</DependentUpon>
+    <Compile Include="views\frmReportDSSinhVien.Designer.cs">
+      <DependentUpon>frmReportDSSinhVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\frmReportDSLTC.cs">
+    <Compile Include="views\frmReportDSLopTinChi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\frmReportDSLTC.Designer.cs">
-      <DependentUpon>frmReportDSLTC.cs</DependentUpon>
+    <Compile Include="views\frmReportDSLopTinChi.Designer.cs">
+      <DependentUpon>frmReportDSLopTinChi.cs</DependentUpon>
     </Compile>
     <Compile Include="views\frmTaoNguoiDung.cs">
       <SubType>Form</SubType>
@@ -184,6 +209,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reports\ReportDSLopTinChi.resx">
+      <DependentUpon>ReportDSLopTinChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\frmLopHoc.resx">
       <DependentUpon>frmLopHoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,11 +227,11 @@
     <EmbeddedResource Include="views\frmReportBangDiemTongKet.resx">
       <DependentUpon>frmReportBangDiemTongKet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\frmReportDSSV.resx">
-      <DependentUpon>frmReportDSSV.cs</DependentUpon>
+    <EmbeddedResource Include="views\frmReportDSSinhVien.resx">
+      <DependentUpon>frmReportDSSinhVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\frmReportDSLTC.resx">
-      <DependentUpon>frmReportDSLTC.cs</DependentUpon>
+    <EmbeddedResource Include="views\frmReportDSLopTinChi.resx">
+      <DependentUpon>frmReportDSLopTinChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\frmTaoNguoiDung.resx">
       <DependentUpon>frmTaoNguoiDung.cs</DependentUpon>
@@ -253,6 +281,17 @@
     <None Include="QLDSV_HTCDataSet.xss">
       <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
     </None>
+    <None Include="QLDSV_HTCDataSet1.xsc">
+      <DependentUpon>QLDSV_HTCDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_HTCDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_HTCDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_HTCDataSet1.xss">
+      <DependentUpon>QLDSV_HTCDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -266,6 +305,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

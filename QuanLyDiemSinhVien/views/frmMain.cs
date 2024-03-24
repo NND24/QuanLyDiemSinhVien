@@ -164,11 +164,11 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnDanhSachLTC_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = CheckExists(typeof(frmReportDSLTC));
+            Form frm = CheckExists(typeof(frmReportDSLopTinChi));
             if (frm != null) frm.Activate();
             else
             {
-                frmReportDSLTC frmdsltc = new frmReportDSLTC();
+                frmReportDSLopTinChi frmdsltc = new frmReportDSLopTinChi();
                 frmdsltc.MdiParent = this;
                 frmdsltc.Show();
             }
@@ -176,11 +176,11 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnDanhSachSinhVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = CheckExists(typeof(frmReportDSSV));
+            Form frm = CheckExists(typeof(frmReportDSSinhVien));
             if (frm != null) frm.Activate();
             else
             {
-                frmReportDSSV frmdssv = new frmReportDSSV();
+                frmReportDSSinhVien frmdssv = new frmReportDSSinhVien();
                 frmdssv.MdiParent = this;
                 frmdssv.Show();
             }
