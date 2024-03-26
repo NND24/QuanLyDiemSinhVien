@@ -12,7 +12,7 @@ namespace QuanLyDiemSinhVien.views
         private int positionSV = -1;
         private String flagModeClass = "";
         private String flagModeSV = "";
-        private String cacheTenLOP = "";
+        private String cacheTenLop = "";
 
         public frmLopHoc()
         {
@@ -167,7 +167,7 @@ namespace QuanLyDiemSinhVien.views
                 }
             }
 
-            if (flagModeClass == "ADDCLASS" || flagModeClass == "EDITCLASS" && cacheTenLOP != txtTenLop.Text.Trim())
+            if (flagModeClass == "ADDCLASS" || flagModeClass == "EDITCLASS" && cacheTenLop != txtTenLop.Text.Trim())
             {
                 string query2 = "DECLARE @return_value INT " +
                                " EXEC @return_value = [dbo].[SP_KIEMTRA_TEN] " +
@@ -220,7 +220,7 @@ namespace QuanLyDiemSinhVien.views
                 panelNhapLieu.Enabled = false;
                 cmbKhoa.Enabled = true;
                 btnXoa.Enabled = btnSua.Enabled = true;
-                cacheTenLOP = "";
+                cacheTenLop = "";
             }
         }
 
@@ -233,7 +233,7 @@ namespace QuanLyDiemSinhVien.views
             cmbKhoa.Enabled = false;
             txtMaLop.Enabled = false;
             flagModeClass = "EDITCLASS";
-            cacheTenLOP = txtTenLop.Text.Trim();
+            cacheTenLop = txtTenLop.Text.Trim();
 
             gridControlLop.Enabled = panelSinhVien.Enabled = false;
 
@@ -256,7 +256,7 @@ namespace QuanLyDiemSinhVien.views
             btnThem.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = false;
             cmbKhoa.Enabled = true;
-            cacheTenLOP = "";
+            cacheTenLop = "";
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

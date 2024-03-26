@@ -36,6 +36,8 @@ namespace QuanLyDiemSinhVien.views
             loadCmbNienKhoa();
         }
 
+
+
         private void loadCmbNienKhoa()
         {
             string cmd = "EXEC SP_LAY_DS_NIENKHOA";
@@ -83,6 +85,32 @@ namespace QuanLyDiemSinhVien.views
             this.gc_DSSV_DangKy.DataSource = dkTable;
         }
 
+        private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbKhoa.SelectedItem.ToString() == "System.Data.DataRowView") return;
+
+            Program.servername = cmbKhoa.SelectedItem.ToString();
+            if (cmbKhoa.SelectedIndex != Program.mPhongBan)
+            {
+                Program.mlogin = Program.remoteLogin;
+                Program.password = Program.remotePass;
+            }
+            else
+            {
+                Program.mlogin = Program.mloginDN;
+                Program.password = Program.passDN;
+            }
+
+            if (Program.KetNoi() == 0)
+            {
+                MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+            }
+            else
+            {
+                loadCmbNienKhoa();
+            }
+        }
+
         private void cmbNienKhoa_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             loadCmbHocKy(cmbNienKhoa.Text);
@@ -107,6 +135,9 @@ namespace QuanLyDiemSinhVien.views
             cmbKhoa.Enabled = false;
             loadTableDK();
             panelControlNhapTT.Enabled = btnBatDau.Enabled = false;
+            this.MASV.OptionsColumn.AllowFocus = false;
+            this.HOTEN.OptionsColumn.AllowFocus = false;
+            this.DIEM_TK.OptionsColumn.AllowFocus = false;
             this.DIEM_CC.OptionsColumn.AllowFocus = true;
             this.DIEM_GK.OptionsColumn.AllowFocus = true;
             this.DIEM_CK.OptionsColumn.AllowFocus = true;
@@ -147,6 +178,9 @@ namespace QuanLyDiemSinhVien.views
                 panelControlNhapTT.Enabled = btnBatDau.Enabled = true;
                 btnCapNhat.Enabled = false;
                 cmbKhoa.Enabled = true;
+                this.MASV.OptionsColumn.AllowEdit = false;
+                this.HOTEN.OptionsColumn.AllowEdit = false;
+                this.DIEM_TK.OptionsColumn.AllowEdit = false;
                 this.DIEM_CC.OptionsColumn.AllowFocus = false;
                 this.DIEM_GK.OptionsColumn.AllowFocus = false;
                 this.DIEM_CK.OptionsColumn.AllowFocus = false;
@@ -206,29 +240,18 @@ namespace QuanLyDiemSinhVien.views
             }
         }
 
-        private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        private void gv_DSSV_DangKy_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if (cmbKhoa.SelectedItem.ToString() == "System.Data.DataRowView") return;
-
-            Program.servername = cmbKhoa.SelectedItem.ToString();
-            if (cmbKhoa.SelectedIndex != Program.mPhongBan)
+            if (e.Column.FieldName == "DIEM_CC" || e.Column.FieldName == "DIEM_GK" || e.Column.FieldName == "DIEM_CK")
             {
-                Program.mlogin = Program.remoteLogin;
-                Program.password = Program.remotePass;
-            }
-            else
-            {
-                Program.mlogin = Program.mloginDN;
-                Program.password = Program.passDN;
-            }
-
-            if (Program.KetNoi() == 0)
-            {
-                MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
-            }
-            else
-            {
-                loadCmbNienKhoa();
+                double diem_CC, diem_GK, diem_CK;
+                if (double.TryParse(gv_DSSV_DangKy.GetRowCellValue(e.RowHandle, "DIEM_CC").ToString(), out diem_CC) &&
+                    double.TryParse(gv_DSSV_DangKy.GetRowCellValue(e.RowHandle, "DIEM_GK").ToString(), out diem_GK) &&
+                    double.TryParse(gv_DSSV_DangKy.GetRowCellValue(e.RowHandle, "DIEM_CK").ToString(), out diem_CK))
+                {
+                    double diem_TK = diem_CC * 0.1 + diem_GK * 0.3 + diem_CK * 0.6;
+                    gv_DSSV_DangKy.SetRowCellValue(e.RowHandle, "DIEM_TK", diem_TK);
+                }
             }
         }
     }

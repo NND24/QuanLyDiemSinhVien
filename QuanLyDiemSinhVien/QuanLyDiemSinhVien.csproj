@@ -92,11 +92,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QLDSV_HTCDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLDSV_HTCDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="reports\ReportDSLopTinChi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -280,17 +275,6 @@
     </None>
     <None Include="QLDSV_HTCDataSet.xss">
       <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLDSV_HTCDataSet1.xsc">
-      <DependentUpon>QLDSV_HTCDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QLDSV_HTCDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLDSV_HTCDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLDSV_HTCDataSet1.xss">
-      <DependentUpon>QLDSV_HTCDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

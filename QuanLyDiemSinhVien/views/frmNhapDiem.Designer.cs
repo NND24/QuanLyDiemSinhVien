@@ -233,6 +233,7 @@
             this.DIEM_TK});
             this.gv_DSSV_DangKy.GridControl = this.gc_DSSV_DangKy;
             this.gv_DSSV_DangKy.Name = "gv_DSSV_DangKy";
+            this.gv_DSSV_DangKy.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gv_DSSV_DangKy_CellValueChanged);
             this.gv_DSSV_DangKy.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gv_DSSV_DangKy_ValidatingEditor);
             // 
             // DIEM_CK
@@ -280,6 +281,7 @@
             this.DIEM_TK.Caption = "Điểm Tổng Kết";
             this.DIEM_TK.FieldName = "DIEM_TK";
             this.DIEM_TK.Name = "DIEM_TK";
+            this.DIEM_TK.UnboundExpression = "[DIEM_CC] * 0.1 + [DIEM_GK] * 0.3 + [DIEM_CK] * 0.6";
             this.DIEM_TK.Visible = true;
             this.DIEM_TK.VisibleIndex = 5;
             // 
