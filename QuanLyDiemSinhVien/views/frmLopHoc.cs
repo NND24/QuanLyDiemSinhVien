@@ -346,7 +346,7 @@ namespace QuanLyDiemSinhVien.views
                 return false;
             }
 
-            if (flagModeClass == "ADDSV")
+            if (flagModeSV == "ADDSV")
             {
                 string query = " DECLARE @return_value INT " +
                                " EXEC @return_value = [dbo].[SP_KIEMTRA_ID] " +

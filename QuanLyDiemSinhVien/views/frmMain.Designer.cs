@@ -173,7 +173,7 @@
             // 
             // btnDanhSachSinhVien
             // 
-            this.btnDanhSachSinhVien.Caption = "Danh Sách Sinh Viên Theo Lớp Tín Chỉ";
+            this.btnDanhSachSinhVien.Caption = "Danh Sách Sinh Viên Đăng Ký Lớp Tín Chỉ";
             this.btnDanhSachSinhVien.Id = 9;
             this.btnDanhSachSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDanhSachSinhVien.ImageOptions.Image")));
             this.btnDanhSachSinhVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDanhSachSinhVien.ImageOptions.LargeImage")));

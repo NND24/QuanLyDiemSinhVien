@@ -36,8 +36,6 @@ namespace QuanLyDiemSinhVien.views
             loadCmbNienKhoa();
         }
 
-
-
         private void loadCmbNienKhoa()
         {
             string cmd = "EXEC SP_LAY_DS_NIENKHOA";
@@ -130,7 +128,10 @@ namespace QuanLyDiemSinhVien.views
         {
             string cmd = "EXEC SP_LAY_DS_LTC '" + cmbNienKhoa.Text + "', '" + cmbHocKy.Text + "', '" + cmbNhom.Text + "', '" + cmbMonHoc.Text + "'";
             ltcTable = Program.ExecSqlDataTable(cmd);
-            this.gc_DS_LTC.DataSource = ltcTable;
+            if (ltcTable.Rows.Count > 0)
+            {
+                maLTC = Convert.ToInt32(ltcTable.Rows[0]["MaLTC"].ToString());
+            }
             btnCapNhat.Enabled = true;
             cmbKhoa.Enabled = false;
             loadTableDK();
@@ -148,6 +149,7 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnCapNhat_Click(object sender, System.EventArgs e)
         {
+            MessageBox.Show("1");
             DataTable dt = new DataTable();
             dt.Columns.Add("MALTC", typeof(int));
             dt.Columns.Add("MASV", typeof(String));
@@ -204,7 +206,6 @@ namespace QuanLyDiemSinhVien.views
                     btnCapNhat.Enabled = false;
                     cmbKhoa.Enabled = true;
                     this.gc_DSSV_DangKy.DataSource = null;
-                    this.gc_DS_LTC.DataSource = null;
                     gc_DSSV_DangKy.Enabled = false;
                 }
             }
@@ -226,18 +227,6 @@ namespace QuanLyDiemSinhVien.views
                 }
             }
             catch { }
-        }
-
-        private void gv_DS_LTC_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            int index = gv_DS_LTC.FocusedRowHandle;
-            if (index >= 0 && index < ltcTable.Rows.Count)
-            {
-                DataRow row = ltcTable.Rows[index];
-                maLTC = Convert.ToInt32(row["MALTC"]);
-
-                loadTableDK();
-            }
         }
 
         private void gv_DSSV_DangKy_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)

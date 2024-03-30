@@ -92,6 +92,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="reports\ReportBangDiemMonHoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\ReportBangDiemMonHoc.Designer.cs">
+      <DependentUpon>ReportBangDiemMonHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="reports\ReportDSLopTinChi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -204,6 +210,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reports\ReportBangDiemMonHoc.resx">
+      <DependentUpon>ReportBangDiemMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reports\ReportDSLopTinChi.resx">
       <DependentUpon>ReportDSLopTinChi.cs</DependentUpon>
     </EmbeddedResource>
