@@ -33,5 +33,16 @@ namespace QuanLyDiemSinhVien.Properties {
                 return ((string)(this["QLDSV_HTCConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5PRNF3O\\SERVER_1;Initial Catalog=QLDSV_TC;Persist Security In" +
+            "fo=True;User ID=sa;TrustServerCertificate=True")]
+        public string QLDSV_TC_LTCDataset1 {
+            get {
+                return ((string)(this["QLDSV_TC_LTCDataset1"]));
+            }
+        }
     }
 }
