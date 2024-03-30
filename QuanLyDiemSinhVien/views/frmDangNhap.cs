@@ -80,7 +80,7 @@ namespace QuanLyDiemSinhVien.views
             Program.mlogin = txtTenDangNhap.Text.Trim();
             Program.password = txtMatKhau.Text.Trim();
 
-            if (Program.KetNoi() == 1)
+            if (Program.KetNoi(false) == 1)
             {
                 string strCmd = "EXEC SP_KIEMTRA_DANGNHAP '" + Program.mlogin + "'";
                 Program.myReader = Program.ExecSqlDataReader(strCmd);
@@ -88,7 +88,7 @@ namespace QuanLyDiemSinhVien.views
             else if (!cmbKhoa.Text.ToString().Equals("Kế Toán"))
             {
                 Program.mlogin = "SINHVIEN";
-                Program.password = "1";
+                Program.password = "123456";
                 loginNameSV = txtTenDangNhap.Text;
                 Program.passSV = txtMatKhau.Text;
 

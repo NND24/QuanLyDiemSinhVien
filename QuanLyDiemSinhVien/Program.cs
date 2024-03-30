@@ -39,7 +39,7 @@ namespace QuanLyDiemSinhVien
         public static views.frmDangKyLTC frmDangKyLTC;
         public static views.frmXemDiem frmXemDiem;
 
-        public static int KetNoi()
+        public static int KetNoi(Boolean isShow = true)
         {
             if (Program.conn != null && Program.conn.State == ConnectionState.Open)
                 Program.conn.Close();
@@ -55,7 +55,7 @@ namespace QuanLyDiemSinhVien
 
             catch (Exception e)
             {
-                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu.\nVui lòng xem lại user name và password\n" + e.Message, "Lỗi đăng nhập", MessageBoxButtons.OK);
+                if (isShow) MessageBox.Show("Lỗi kết nối cơ sở dữ liệu.\nVui lòng xem lại user name và password\n" + e.Message, "Lỗi đăng nhập", MessageBoxButtons.OK);
                 return 0;
             }
         }
