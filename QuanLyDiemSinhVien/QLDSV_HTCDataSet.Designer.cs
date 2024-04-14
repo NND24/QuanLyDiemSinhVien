@@ -67,6 +67,7 @@ namespace QuanLyDiemSinhVien {
             base.Tables.CollectionChanged += schemaChangedHandler;
             base.Relations.CollectionChanged += schemaChangedHandler;
             this.EndInit();
+            this.InitExpressions();
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -78,6 +79,9 @@ namespace QuanLyDiemSinhVien {
                 global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler1 = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
                 this.Tables.CollectionChanged += schemaChangedHandler1;
                 this.Relations.CollectionChanged += schemaChangedHandler1;
+                if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.ExcludeSchema)) {
+                    this.InitExpressions();
+                }
                 return;
             }
             string strSchema = ((string)(info.GetValue("XmlSchema", typeof(string))));
@@ -122,6 +126,7 @@ namespace QuanLyDiemSinhVien {
             }
             else {
                 this.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
+                this.InitExpressions();
             }
             this.GetSerializationData(info, context);
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -263,6 +268,7 @@ namespace QuanLyDiemSinhVien {
         public override global::System.Data.DataSet Clone() {
             QLDSV_HTCDataSet cln = ((QLDSV_HTCDataSet)(base.Clone()));
             cln.InitVars();
+            cln.InitExpressions();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
         }
@@ -419,7 +425,7 @@ namespace QuanLyDiemSinhVien {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDANGKY = new DANGKYDataTable();
             base.Tables.Add(this.tableDANGKY);
-            this.tableGIANGVIEN = new GIANGVIENDataTable();
+            this.tableGIANGVIEN = new GIANGVIENDataTable(false);
             base.Tables.Add(this.tableGIANGVIEN);
             this.tableKHOA = new KHOADataTable();
             base.Tables.Add(this.tableKHOA);
@@ -572,6 +578,12 @@ namespace QuanLyDiemSinhVien {
             }
             xs.Add(dsSchema);
             return type;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitExpressions() {
+            this.GIANGVIEN.FULLNAMEColumn.Expression = "HO+\' \'+TEN";
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -959,12 +971,23 @@ namespace QuanLyDiemSinhVien {
             
             private global::System.Data.DataColumn columnCHUYENMON;
             
+            private global::System.Data.DataColumn columnFULLNAME;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GIANGVIENDataTable() {
+            public GIANGVIENDataTable() : 
+                    this(false) {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GIANGVIENDataTable(bool initExpressions) {
                 this.TableName = "GIANGVIEN";
                 this.BeginInit();
                 this.InitClass();
+                if ((initExpressions == true)) {
+                    this.InitExpressions();
+                }
                 this.EndInit();
             }
             
@@ -1050,6 +1073,14 @@ namespace QuanLyDiemSinhVien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FULLNAMEColumn {
+                get {
+                    return this.columnFULLNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1085,6 +1116,24 @@ namespace QuanLyDiemSinhVien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public GIANGVIENRow AddGIANGVIENRow(string MAGV, string MAKHOA, string HO, string TEN, string HOCVI, string HOCHAM, string CHUYENMON, string FULLNAME) {
+                GIANGVIENRow rowGIANGVIENRow = ((GIANGVIENRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        MAGV,
+                        MAKHOA,
+                        HO,
+                        TEN,
+                        HOCVI,
+                        HOCHAM,
+                        CHUYENMON,
+                        FULLNAME};
+                rowGIANGVIENRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGIANGVIENRow);
+                return rowGIANGVIENRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public GIANGVIENRow AddGIANGVIENRow(string MAGV, string MAKHOA, string HO, string TEN, string HOCVI, string HOCHAM, string CHUYENMON) {
                 GIANGVIENRow rowGIANGVIENRow = ((GIANGVIENRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -1094,7 +1143,8 @@ namespace QuanLyDiemSinhVien {
                         TEN,
                         HOCVI,
                         HOCHAM,
-                        CHUYENMON};
+                        CHUYENMON,
+                        null};
                 rowGIANGVIENRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGIANGVIENRow);
                 return rowGIANGVIENRow;
@@ -1131,6 +1181,7 @@ namespace QuanLyDiemSinhVien {
                 this.columnHOCVI = base.Columns["HOCVI"];
                 this.columnHOCHAM = base.Columns["HOCHAM"];
                 this.columnCHUYENMON = base.Columns["CHUYENMON"];
+                this.columnFULLNAME = base.Columns["FULLNAME"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1150,6 +1201,8 @@ namespace QuanLyDiemSinhVien {
                 base.Columns.Add(this.columnHOCHAM);
                 this.columnCHUYENMON = new global::System.Data.DataColumn("CHUYENMON", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCHUYENMON);
+                this.columnFULLNAME = new global::System.Data.DataColumn("FULLNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFULLNAME);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMAGV}, true));
                 this.columnMAGV.AllowDBNull = false;
@@ -1164,6 +1217,7 @@ namespace QuanLyDiemSinhVien {
                 this.columnHOCVI.MaxLength = 20;
                 this.columnHOCHAM.MaxLength = 20;
                 this.columnCHUYENMON.MaxLength = 50;
+                this.columnFULLNAME.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1182,6 +1236,12 @@ namespace QuanLyDiemSinhVien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(GIANGVIENRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitExpressions() {
+                this.FULLNAMEColumn.Expression = "HO+\' \'+TEN";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3891,6 +3951,22 @@ namespace QuanLyDiemSinhVien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string FULLNAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableGIANGVIEN.FULLNAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FULLNAME\' in table \'GIANGVIEN\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGIANGVIEN.FULLNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsHOCVINull() {
                 return this.IsNull(this.tableGIANGVIEN.HOCVIColumn);
             }
@@ -3923,6 +3999,18 @@ namespace QuanLyDiemSinhVien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCHUYENMONNull() {
                 this[this.tableGIANGVIEN.CHUYENMONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFULLNAMENull() {
+                return this.IsNull(this.tableGIANGVIEN.FULLNAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFULLNAMENull() {
+                this[this.tableGIANGVIEN.FULLNAMEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5798,7 +5886,7 @@ SELECT MAGV, MAKHOA, HO, TEN, HOCVI, HOCHAM, CHUYENMON FROM GIANGVIEN WHERE (MAG
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual QLDSV_HTCDataSet.GIANGVIENDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QLDSV_HTCDataSet.GIANGVIENDataTable dataTable = new QLDSV_HTCDataSet.GIANGVIENDataTable();
+            QLDSV_HTCDataSet.GIANGVIENDataTable dataTable = new QLDSV_HTCDataSet.GIANGVIENDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

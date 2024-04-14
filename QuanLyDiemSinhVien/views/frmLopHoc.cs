@@ -38,6 +38,8 @@ namespace QuanLyDiemSinhVien.views
             cmbKhoa.ValueMember = "TENSERVER";
             cmbKhoa.SelectedValue = Program.servername;
 
+            MessageBox.Show(cmbKhoa.SelectedItem.ToString());
+
             if (Program.mGroup == "PGV")
             {
                 panelChonKhoa.Enabled = true;
@@ -50,8 +52,8 @@ namespace QuanLyDiemSinhVien.views
 
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbKhoa.SelectedItem.ToString() == "System.Data.DataRowView") return;
-
+            if (cmbKhoa.SelectedValue.ToString() == "System.Data.DataRowView")
+                return;
             Program.servername = cmbKhoa.SelectedValue.ToString();
 
             if (cmbKhoa.SelectedIndex != Program.mPhongBan)
@@ -64,7 +66,6 @@ namespace QuanLyDiemSinhVien.views
                 Program.mlogin = Program.mloginDN;
                 Program.password = Program.passDN;
             }
-
             if (Program.KetNoi() == 0)
             {
                 MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);

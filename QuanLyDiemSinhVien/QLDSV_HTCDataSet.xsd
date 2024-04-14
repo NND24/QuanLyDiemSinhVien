@@ -634,6 +634,7 @@ SELECT MASV, HO, TEN, MALOP, PHAI, NGAYSINH, DIACHI, DANGHIHOC, PASSWORD FROM SI
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="FULLNAME" msdata:ReadOnly="true" msdata:Expression="HO+' '+TEN" msprop:Generator_ColumnPropNameInRow="FULLNAME" msprop:Generator_ColumnPropNameInTable="FULLNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnFULLNAME" msprop:Generator_UserColumnName="FULLNAME" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -803,19 +804,19 @@ SELECT MASV, HO, TEN, MALOP, PHAI, NGAYSINH, DIACHI, DANGHIHOC, PASSWORD FROM SI
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SP_LAY_DS_LTC" msprop:Generator_RowEvHandlerName="SP_LAY_DS_LTCRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_LAY_DS_LTCRowDeleted" msprop:Generator_RowDeletingName="SP_LAY_DS_LTCRowDeleting" msprop:Generator_RowEvArgName="SP_LAY_DS_LTCRowChangeEvent" msprop:Generator_TablePropName="SP_LAY_DS_LTC" msprop:Generator_RowChangedName="SP_LAY_DS_LTCRowChanged" msprop:Generator_RowChangingName="SP_LAY_DS_LTCRowChanging" msprop:Generator_TableClassName="SP_LAY_DS_LTCDataTable" msprop:Generator_RowClassName="SP_LAY_DS_LTCRow" msprop:Generator_TableVarName="tableSP_LAY_DS_LTC" msprop:Generator_UserTableName="SP_LAY_DS_LTC">
+        <xs:element name="SP_LAY_DS_LTC" msprop:Generator_RowClassName="SP_LAY_DS_LTCRow" msprop:Generator_RowEvHandlerName="SP_LAY_DS_LTCRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_LAY_DS_LTCRowDeleted" msprop:Generator_RowDeletingName="SP_LAY_DS_LTCRowDeleting" msprop:Generator_RowEvArgName="SP_LAY_DS_LTCRowChangeEvent" msprop:Generator_TablePropName="SP_LAY_DS_LTC" msprop:Generator_RowChangedName="SP_LAY_DS_LTCRowChanged" msprop:Generator_UserTableName="SP_LAY_DS_LTC" msprop:Generator_RowChangingName="SP_LAY_DS_LTCRowChanging" msprop:Generator_TableClassName="SP_LAY_DS_LTCDataTable" msprop:Generator_TableVarName="tableSP_LAY_DS_LTC">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MALTC" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="MALTC" msprop:Generator_ColumnPropNameInTable="MALTCColumn" msprop:Generator_ColumnVarNameInTable="columnMALTC" msprop:Generator_UserColumnName="MALTC" type="xs:int" />
-              <xs:element name="TENMH" msprop:Generator_ColumnPropNameInRow="TENMH" msprop:Generator_ColumnPropNameInTable="TENMHColumn" msprop:Generator_ColumnVarNameInTable="columnTENMH" msprop:Generator_UserColumnName="TENMH">
+              <xs:element name="MALTC" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="MALTC" msprop:Generator_ColumnPropNameInTable="MALTCColumn" msprop:Generator_ColumnPropNameInRow="MALTC" msprop:Generator_ColumnVarNameInTable="columnMALTC" type="xs:int" />
+              <xs:element name="TENMH" msprop:Generator_UserColumnName="TENMH" msprop:Generator_ColumnPropNameInTable="TENMHColumn" msprop:Generator_ColumnPropNameInRow="TENMH" msprop:Generator_ColumnVarNameInTable="columnTENMH">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="NHOM" msprop:Generator_ColumnPropNameInRow="NHOM" msprop:Generator_ColumnPropNameInTable="NHOMColumn" msprop:Generator_ColumnVarNameInTable="columnNHOM" msprop:Generator_UserColumnName="NHOM" type="xs:int" />
-              <xs:element name="HOTEN" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="HOTEN" msprop:Generator_ColumnPropNameInTable="HOTENColumn" msprop:Generator_ColumnVarNameInTable="columnHOTEN" msprop:Generator_UserColumnName="HOTEN" minOccurs="0">
+              <xs:element name="NHOM" msprop:Generator_UserColumnName="NHOM" msprop:Generator_ColumnPropNameInTable="NHOMColumn" msprop:Generator_ColumnPropNameInRow="NHOM" msprop:Generator_ColumnVarNameInTable="columnNHOM" type="xs:int" />
+              <xs:element name="HOTEN" msdata:ReadOnly="true" msprop:Generator_UserColumnName="HOTEN" msprop:Generator_ColumnPropNameInTable="HOTENColumn" msprop:Generator_ColumnPropNameInRow="HOTEN" msprop:Generator_ColumnVarNameInTable="columnHOTEN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="61" />
@@ -825,28 +826,28 @@ SELECT MASV, HO, TEN, MALOP, PHAI, NGAYSINH, DIACHI, DANGHIHOC, PASSWORD FROM SI
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SP_LAY_DS_DKMH" msprop:Generator_RowEvHandlerName="SP_LAY_DS_DKMHRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_LAY_DS_DKMHRowDeleted" msprop:Generator_RowDeletingName="SP_LAY_DS_DKMHRowDeleting" msprop:Generator_RowEvArgName="SP_LAY_DS_DKMHRowChangeEvent" msprop:Generator_TablePropName="SP_LAY_DS_DKMH" msprop:Generator_RowChangedName="SP_LAY_DS_DKMHRowChanged" msprop:Generator_RowChangingName="SP_LAY_DS_DKMHRowChanging" msprop:Generator_TableClassName="SP_LAY_DS_DKMHDataTable" msprop:Generator_RowClassName="SP_LAY_DS_DKMHRow" msprop:Generator_TableVarName="tableSP_LAY_DS_DKMH" msprop:Generator_UserTableName="SP_LAY_DS_DKMH">
+        <xs:element name="SP_LAY_DS_DKMH" msprop:Generator_RowClassName="SP_LAY_DS_DKMHRow" msprop:Generator_RowEvHandlerName="SP_LAY_DS_DKMHRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_LAY_DS_DKMHRowDeleted" msprop:Generator_RowDeletingName="SP_LAY_DS_DKMHRowDeleting" msprop:Generator_RowEvArgName="SP_LAY_DS_DKMHRowChangeEvent" msprop:Generator_TablePropName="SP_LAY_DS_DKMH" msprop:Generator_RowChangedName="SP_LAY_DS_DKMHRowChanged" msprop:Generator_UserTableName="SP_LAY_DS_DKMH" msprop:Generator_RowChangingName="SP_LAY_DS_DKMHRowChanging" msprop:Generator_TableClassName="SP_LAY_DS_DKMHDataTable" msprop:Generator_TableVarName="tableSP_LAY_DS_DKMH">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="LOPTC" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="LOPTC" msprop:Generator_ColumnPropNameInTable="LOPTCColumn" msprop:Generator_ColumnVarNameInTable="columnLOPTC" msprop:Generator_UserColumnName="LOPTC" type="xs:int" minOccurs="0" />
-              <xs:element name="MASV" msprop:Generator_ColumnPropNameInRow="MASV" msprop:Generator_ColumnPropNameInTable="MASVColumn" msprop:Generator_ColumnVarNameInTable="columnMASV" msprop:Generator_UserColumnName="MASV">
+              <xs:element name="LOPTC" msdata:ReadOnly="true" msprop:Generator_UserColumnName="LOPTC" msprop:Generator_ColumnPropNameInTable="LOPTCColumn" msprop:Generator_ColumnPropNameInRow="LOPTC" msprop:Generator_ColumnVarNameInTable="columnLOPTC" type="xs:int" minOccurs="0" />
+              <xs:element name="MASV" msprop:Generator_UserColumnName="MASV" msprop:Generator_ColumnPropNameInTable="MASVColumn" msprop:Generator_ColumnPropNameInRow="MASV" msprop:Generator_ColumnVarNameInTable="columnMASV">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HOTEN" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="HOTEN" msprop:Generator_ColumnPropNameInTable="HOTENColumn" msprop:Generator_ColumnVarNameInTable="columnHOTEN" msprop:Generator_UserColumnName="HOTEN" minOccurs="0">
+              <xs:element name="HOTEN" msdata:ReadOnly="true" msprop:Generator_UserColumnName="HOTEN" msprop:Generator_ColumnPropNameInTable="HOTENColumn" msprop:Generator_ColumnPropNameInRow="HOTEN" msprop:Generator_ColumnVarNameInTable="columnHOTEN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="61" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DIEM_CC" msprop:Generator_ColumnPropNameInRow="DIEM_CC" msprop:Generator_ColumnPropNameInTable="DIEM_CCColumn" msprop:Generator_ColumnVarNameInTable="columnDIEM_CC" msprop:Generator_UserColumnName="DIEM_CC" type="xs:int" minOccurs="0" />
-              <xs:element name="DIEM_GK" msprop:Generator_ColumnPropNameInRow="DIEM_GK" msprop:Generator_ColumnPropNameInTable="DIEM_GKColumn" msprop:Generator_ColumnVarNameInTable="columnDIEM_GK" msprop:Generator_UserColumnName="DIEM_GK" type="xs:double" minOccurs="0" />
-              <xs:element name="DIEM_CK" msprop:Generator_ColumnPropNameInRow="DIEM_CK" msprop:Generator_ColumnPropNameInTable="DIEM_CKColumn" msprop:Generator_ColumnVarNameInTable="columnDIEM_CK" msprop:Generator_UserColumnName="DIEM_CK" type="xs:double" minOccurs="0" />
-              <xs:element name="DIEM_TK" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="DIEM_TK" msprop:Generator_ColumnPropNameInTable="DIEM_TKColumn" msprop:Generator_ColumnVarNameInTable="columnDIEM_TK" msprop:Generator_UserColumnName="DIEM_TK" type="xs:double" minOccurs="0" />
+              <xs:element name="DIEM_CC" msprop:Generator_UserColumnName="DIEM_CC" msprop:Generator_ColumnPropNameInTable="DIEM_CCColumn" msprop:Generator_ColumnPropNameInRow="DIEM_CC" msprop:Generator_ColumnVarNameInTable="columnDIEM_CC" type="xs:int" minOccurs="0" />
+              <xs:element name="DIEM_GK" msprop:Generator_UserColumnName="DIEM_GK" msprop:Generator_ColumnPropNameInTable="DIEM_GKColumn" msprop:Generator_ColumnPropNameInRow="DIEM_GK" msprop:Generator_ColumnVarNameInTable="columnDIEM_GK" type="xs:double" minOccurs="0" />
+              <xs:element name="DIEM_CK" msprop:Generator_UserColumnName="DIEM_CK" msprop:Generator_ColumnPropNameInTable="DIEM_CKColumn" msprop:Generator_ColumnPropNameInRow="DIEM_CK" msprop:Generator_ColumnVarNameInTable="columnDIEM_CK" type="xs:double" minOccurs="0" />
+              <xs:element name="DIEM_TK" msdata:ReadOnly="true" msprop:Generator_UserColumnName="DIEM_TK" msprop:Generator_ColumnPropNameInTable="DIEM_TKColumn" msprop:Generator_ColumnPropNameInRow="DIEM_TK" msprop:Generator_ColumnVarNameInTable="columnDIEM_TK" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -892,13 +893,13 @@ SELECT MASV, HO, TEN, MALOP, PHAI, NGAYSINH, DIACHI, DANGHIHOC, PASSWORD FROM SI
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_DangKy_LopTinChi" msdata:parent="LOPTINCHI" msdata:child="DANGKY" msdata:parentkey="MALTC" msdata:childkey="MALTC" msprop:Generator_UserParentTable="LOPTINCHI" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_RelationVarName="relationFK_DangKy_LopTinChi" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_UserRelationName="FK_DangKy_LopTinChi" msprop:Generator_ParentPropName="LOPTINCHIRow" />
-      <msdata:Relationship name="FK_DangKy_Sinhvien" msdata:parent="SINHVIEN" msdata:child="DANGKY" msdata:parentkey="MASV" msdata:childkey="MASV" msprop:Generator_UserParentTable="SINHVIEN" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_RelationVarName="relationFK_DangKy_Sinhvien" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_UserRelationName="FK_DangKy_Sinhvien" msprop:Generator_ParentPropName="SINHVIENRow" />
-      <msdata:Relationship name="FK_Lop_Khoa" msdata:parent="KHOA" msdata:child="LOP" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_UserChildTable="LOP" msprop:Generator_RelationVarName="relationFK_Lop_Khoa" msprop:Generator_ChildPropName="GetLOPRows" msprop:Generator_ParentPropName="KHOARow" msprop:Generator_UserRelationName="FK_Lop_Khoa" />
-      <msdata:Relationship name="FK_LopTinChi_GiangVien" msdata:parent="GIANGVIEN" msdata:child="LOPTINCHI" msdata:parentkey="MAGV" msdata:childkey="MAGV" msprop:Generator_UserParentTable="GIANGVIEN" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_RelationVarName="relationFK_LopTinChi_GiangVien" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_ParentPropName="GIANGVIENRow" msprop:Generator_UserRelationName="FK_LopTinChi_GiangVien" />
-      <msdata:Relationship name="FK_LopTinChi_Khoa" msdata:parent="KHOA" msdata:child="LOPTINCHI" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_RelationVarName="relationFK_LopTinChi_Khoa" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_ParentPropName="KHOARow" msprop:Generator_UserRelationName="FK_LopTinChi_Khoa" />
-      <msdata:Relationship name="FK_LopTinChi_Monhoc" msdata:parent="MONHOC" msdata:child="LOPTINCHI" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserParentTable="MONHOC" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_RelationVarName="relationFK_LopTinChi_Monhoc" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_UserRelationName="FK_LopTinChi_Monhoc" msprop:Generator_ParentPropName="MONHOCRow" />
-      <msdata:Relationship name="FK_Sinhvien_Lop" msdata:parent="LOP" msdata:child="SINHVIEN" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserParentTable="LOP" msprop:Generator_UserChildTable="SINHVIEN" msprop:Generator_RelationVarName="relationFK_Sinhvien_Lop" msprop:Generator_ChildPropName="GetSINHVIENRows" msprop:Generator_ParentPropName="LOPRow" msprop:Generator_UserRelationName="FK_Sinhvien_Lop" />
+      <msdata:Relationship name="FK_DangKy_LopTinChi" msdata:parent="LOPTINCHI" msdata:child="DANGKY" msdata:parentkey="MALTC" msdata:childkey="MALTC" msprop:Generator_UserParentTable="LOPTINCHI" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_RelationVarName="relationFK_DangKy_LopTinChi" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_ParentPropName="LOPTINCHIRow" msprop:Generator_UserRelationName="FK_DangKy_LopTinChi" />
+      <msdata:Relationship name="FK_DangKy_Sinhvien" msdata:parent="SINHVIEN" msdata:child="DANGKY" msdata:parentkey="MASV" msdata:childkey="MASV" msprop:Generator_UserParentTable="SINHVIEN" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_RelationVarName="relationFK_DangKy_Sinhvien" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_ParentPropName="SINHVIENRow" msprop:Generator_UserRelationName="FK_DangKy_Sinhvien" />
+      <msdata:Relationship name="FK_Lop_Khoa" msdata:parent="KHOA" msdata:child="LOP" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_UserChildTable="LOP" msprop:Generator_RelationVarName="relationFK_Lop_Khoa" msprop:Generator_ChildPropName="GetLOPRows" msprop:Generator_UserRelationName="FK_Lop_Khoa" msprop:Generator_ParentPropName="KHOARow" />
+      <msdata:Relationship name="FK_LopTinChi_GiangVien" msdata:parent="GIANGVIEN" msdata:child="LOPTINCHI" msdata:parentkey="MAGV" msdata:childkey="MAGV" msprop:Generator_UserParentTable="GIANGVIEN" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_RelationVarName="relationFK_LopTinChi_GiangVien" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_UserRelationName="FK_LopTinChi_GiangVien" msprop:Generator_ParentPropName="GIANGVIENRow" />
+      <msdata:Relationship name="FK_LopTinChi_Khoa" msdata:parent="KHOA" msdata:child="LOPTINCHI" msdata:parentkey="MAKHOA" msdata:childkey="MAKHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_RelationVarName="relationFK_LopTinChi_Khoa" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_UserRelationName="FK_LopTinChi_Khoa" msprop:Generator_ParentPropName="KHOARow" />
+      <msdata:Relationship name="FK_LopTinChi_Monhoc" msdata:parent="MONHOC" msdata:child="LOPTINCHI" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserParentTable="MONHOC" msprop:Generator_UserChildTable="LOPTINCHI" msprop:Generator_RelationVarName="relationFK_LopTinChi_Monhoc" msprop:Generator_ChildPropName="GetLOPTINCHIRows" msprop:Generator_ParentPropName="MONHOCRow" msprop:Generator_UserRelationName="FK_LopTinChi_Monhoc" />
+      <msdata:Relationship name="FK_Sinhvien_Lop" msdata:parent="LOP" msdata:child="SINHVIEN" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserParentTable="LOP" msprop:Generator_UserChildTable="SINHVIEN" msprop:Generator_RelationVarName="relationFK_Sinhvien_Lop" msprop:Generator_ChildPropName="GetSINHVIENRows" msprop:Generator_UserRelationName="FK_Sinhvien_Lop" msprop:Generator_ParentPropName="LOPRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
