@@ -110,6 +110,12 @@
     <Compile Include="reports\ReportHocPhi.Designer.cs">
       <DependentUpon>ReportHocPhi.cs</DependentUpon>
     </Compile>
+    <Compile Include="reports\ReportPhieuDiem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\ReportPhieuDiem.Designer.cs">
+      <DependentUpon>ReportPhieuDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,11 +140,11 @@
     <Compile Include="views\frmReportDSHocPhi.Designer.cs">
       <DependentUpon>frmReportDSHocPhi.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\frmReportBangDiemSV.cs">
+    <Compile Include="views\frmReportPhieuDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\frmReportBangDiemSV.Designer.cs">
-      <DependentUpon>frmReportBangDiemSV.cs</DependentUpon>
+    <Compile Include="views\frmReportPhieuDiem.Designer.cs">
+      <DependentUpon>frmReportPhieuDiem.cs</DependentUpon>
     </Compile>
     <Compile Include="views\frmReportBangDiemTongKet.cs">
       <SubType>Form</SubType>
@@ -231,6 +237,9 @@
     <EmbeddedResource Include="reports\ReportHocPhi.resx">
       <DependentUpon>ReportHocPhi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reports\ReportPhieuDiem.resx">
+      <DependentUpon>ReportPhieuDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,8 +252,8 @@
     <EmbeddedResource Include="views\frmReportDSHocPhi.resx">
       <DependentUpon>frmReportDSHocPhi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\frmReportBangDiemSV.resx">
-      <DependentUpon>frmReportBangDiemSV.cs</DependentUpon>
+    <EmbeddedResource Include="views\frmReportPhieuDiem.resx">
+      <DependentUpon>frmReportPhieuDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\frmReportBangDiemTongKet.resx">
       <DependentUpon>frmReportBangDiemTongKet.cs</DependentUpon>

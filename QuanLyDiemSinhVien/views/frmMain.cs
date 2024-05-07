@@ -215,11 +215,11 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnBangDiemSinhVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = CheckExists(typeof(frmReportBangDiemSV));
+            Form frm = CheckExists(typeof(frmReportPhieuDiem));
             if (frm != null) frm.Activate();
             else
             {
-                frmReportBangDiemSV frmBangDiemSV = new frmReportBangDiemSV();
+                frmReportPhieuDiem frmBangDiemSV = new frmReportPhieuDiem();
                 frmBangDiemSV.MdiParent = this;
                 frmBangDiemSV.Show();
             }

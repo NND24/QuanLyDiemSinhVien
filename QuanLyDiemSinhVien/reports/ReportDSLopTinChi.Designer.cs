@@ -60,6 +60,7 @@
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.lbKhoa = new DevExpress.XtraReports.UI.XRLabel();
             this.lbHocKy = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
@@ -94,7 +95,7 @@
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.table1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -141,6 +142,17 @@
             this.label1});
             this.ReportHeader.HeightF = 88.12505F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Times New Roman", 12F, ((DevExpress.Drawing.DXFontStyle)((DevExpress.Drawing.DXFontStyle.Bold | DevExpress.Drawing.DXFontStyle.Italic))));
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(48.7367F, 55.12505F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(51.04167F, 23F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.Text = "Khoa:";
             // 
             // lbKhoa
             // 
@@ -223,6 +235,7 @@
             this.xrTableCell7,
             this.tableCell1,
             this.tableCell2,
+            this.xrTableCell10,
             this.tableCell4,
             this.tableCell5});
             this.tableRow1.Name = "tableRow1";
@@ -273,7 +286,7 @@
             this.tableCell1.StylePriority.UseTextAlignment = false;
             this.tableCell1.Text = "Tên Môn Học";
             this.tableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell1.Weight = 0.30091671599529479D;
+            this.tableCell1.Weight = 0.29940878586758279D;
             // 
             // tableCell2
             // 
@@ -296,7 +309,7 @@
             this.tableCell2.StylePriority.UseTextAlignment = false;
             this.tableCell2.Text = "Nhóm";
             this.tableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell2.Weight = 0.10465131313711282D;
+            this.tableCell2.Weight = 0.10743440046860098D;
             // 
             // tableCell4
             // 
@@ -319,7 +332,7 @@
             this.tableCell4.StylePriority.UseTextAlignment = false;
             this.tableCell4.Text = "SV Tối Thiểu";
             this.tableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.tableCell4.Weight = 0.14035051810675975D;
+            this.tableCell4.Weight = 0.14102557199582108D;
             // 
             // tableCell5
             // 
@@ -645,16 +658,29 @@
             this.PageHeader.HeightF = 25.41663F;
             this.PageHeader.Name = "PageHeader";
             // 
-            // xrLabel1
+            // xrTableCell10
             // 
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Times New Roman", 12F, ((DevExpress.Drawing.DXFontStyle)((DevExpress.Drawing.DXFontStyle.Bold | DevExpress.Drawing.DXFontStyle.Italic))));
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(48.7367F, 55.12505F);
-            this.xrLabel1.Multiline = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(51.04167F, 23F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = "Khoa:";
+            this.xrTableCell10.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.xrTableCell10.BorderColor = System.Drawing.Color.Black;
+            this.xrTableCell10.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell10.BorderWidth = 1F;
+            this.xrTableCell10.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell10.ForeColor = System.Drawing.Color.Black;
+            this.xrTableCell10.Multiline = true;
+            this.xrTableCell10.Name = "xrTableCell10";
+            this.xrTableCell10.StyleName = "GroupCaption1";
+            this.xrTableCell10.StylePriority.UseBackColor = false;
+            this.xrTableCell10.StylePriority.UseBorderColor = false;
+            this.xrTableCell10.StylePriority.UseBorders = false;
+            this.xrTableCell10.StylePriority.UseBorderWidth = false;
+            this.xrTableCell10.StylePriority.UseFont = false;
+            this.xrTableCell10.StylePriority.UseForeColor = false;
+            this.xrTableCell10.StylePriority.UseTextAlignment = false;
+            this.xrTableCell10.Text = "Họ tên GV giảng";
+            this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell10.Weight = 0.26578423990007294D;
             // 
             // ReportDSLopTinChi
             // 
@@ -727,5 +753,6 @@
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         public DevExpress.XtraReports.UI.XRLabel lbKhoa;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
     }
 }
