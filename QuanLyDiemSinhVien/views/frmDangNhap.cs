@@ -153,5 +153,14 @@ namespace QuanLyDiemSinhVien.views
 
             }
         }
+
+        public void loadAgain()
+        {
+            cmbKhoa.SelectedItem = Program.mGroup;
+            Program.servername = cmbKhoa.SelectedValue.ToString();
+            txtTenDangNhap.Text = null;
+            txtMatKhau.Text = null;
+            txtTenDangNhap.Focus();
+        }
     }
 }

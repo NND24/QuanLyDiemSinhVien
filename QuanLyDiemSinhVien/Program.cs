@@ -38,6 +38,8 @@ namespace QuanLyDiemSinhVien
         public static views.frmHocPhi frmHocPhi;
         public static views.frmDangKyLTC frmDangKyLTC;
         public static views.frmXemDiem frmXemDiem;
+        public static views.frmDoiMatKhau frmDoiMatKhau;
+        public static views.frmTaoNguoiDung frmTaoNguoiDung;
 
         public static int KetNoi(Boolean isShow = true)
         {

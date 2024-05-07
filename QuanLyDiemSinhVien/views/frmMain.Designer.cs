@@ -231,10 +231,12 @@
             // btnDoiMatKhau
             // 
             this.btnDoiMatKhau.Caption = "Đổi Mật Khẩu";
+            this.btnDoiMatKhau.Enabled = false;
             this.btnDoiMatKhau.Id = 15;
             this.btnDoiMatKhau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDoiMatKhau.ImageOptions.Image")));
             this.btnDoiMatKhau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDoiMatKhau.ImageOptions.LargeImage")));
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDoiMatKhau_ItemClick);
             // 
             // btnDangXuat
             // 

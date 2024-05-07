@@ -18,6 +18,7 @@ namespace QuanLyDiemSinhVien.views
                 reportPagePGV_Khoa.Enabled = true;
                 btnTaoNguoiDung.Enabled = true;
                 ribbon.SelectedPage = ribbonPageQuanLy;
+                btnDoiMatKhau.Enabled = true;
             }
             else if (Program.mGroup.Equals("KHOA"))
             {
@@ -27,6 +28,7 @@ namespace QuanLyDiemSinhVien.views
                 reportPagePGV_Khoa.Enabled = true;
                 btnTaoNguoiDung.Enabled = true;
                 ribbon.SelectedPage = ribbonPageQuanLy;
+                btnDoiMatKhau.Enabled = true;
             }
             else if (Program.mGroup.Equals("SINHVIEN"))
             {
@@ -43,6 +45,7 @@ namespace QuanLyDiemSinhVien.views
                 reportPagePKT.Visible = true;
                 reportPagePKT.Enabled = true;
                 btnTaoNguoiDung.Enabled = true;
+                btnDoiMatKhau.Enabled = true;
             }
         }
 
@@ -236,7 +239,7 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnTaoNguoiDung_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = CheckExists(typeof(frmReportDSHocPhi));
+            Form frm = CheckExists(typeof(frmTaoNguoiDung));
             if (frm != null) frm.Activate();
             else
             {
@@ -246,6 +249,16 @@ namespace QuanLyDiemSinhVien.views
             }
         }
 
-
+        private void btnDoiMatKhau_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(frmDoiMatKhau));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDoiMatKhau frmDoiMatKhau = new frmDoiMatKhau();
+                frmDoiMatKhau.MdiParent = this;
+                frmDoiMatKhau.Show();
+            }
+        }
     }
 }

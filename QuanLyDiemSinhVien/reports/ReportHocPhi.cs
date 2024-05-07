@@ -21,40 +21,30 @@ namespace QuanLyDiemSinhVien.reports
             string[] placeValues = new string[] { "", "nghìn", "triệu", "tỷ" };
             bool isNegative = false;
 
-            // -12345678.3445435 => "-12345678"
+            // Convert the number to string and check if it's negative
             string sNumber = inputNumber.ToString();
-
-
             double number = inputNumber;
-
             if (number < 0)
             {
+                // If negative, make it positive for conversion
                 number = -number;
                 sNumber = number.ToString();
                 isNegative = true;
             }
 
-
             int ones, tens, hundreds;
 
             int positionDigit = sNumber.Length;   // last -> first
-
-            string result = " ";
-
+            string result = "";
 
             if (positionDigit == 0)
                 result = unitNumbers[0] + result;
             else
             {
-                // 0:       ###
-                // 1: nghìn ###,###
-                // 2: triệu ###,###,###
-                // 3: tỷ    ###,###,###,###
                 int placeValue = 0;
 
                 while (positionDigit > 0)
                 {
-                    // Check last 3 digits remain ### (hundreds tens ones)
                     tens = hundreds = -1;
                     ones = Convert.ToInt32(sNumber.Substring(positionDigit - 1, 1));
                     positionDigit--;
@@ -102,16 +92,29 @@ namespace QuanLyDiemSinhVien.reports
                 }
             }
             result = result.Trim();
-            if (isNegative) result = "Âm " + result;
+
+            // Add "Âm" only if the number is negative
+            if (isNegative)
+            {
+                result = "Âm " + result;
+            }
+
             return result + (suffix ? " đồng chẵn" : "");
         }
+
 
         private void lblBangChu_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             XRLabel label = (XRLabel)sender;
-            double FieldValue = Convert.ToDouble(GetCurrentColumnValue("tongtien"));
-            System.Console.WriteLine(FieldValue.ToString());
-            (sender as XRLabel).Text = NumberToText(FieldValue);
+            // Retrieve the value of lblTongTien from the report's dataset
+            double fieldValue = Convert.ToDouble(GetCurrentColumnValue("lblTongTien"));
+
+            // Convert the numeric value to text using the NumberToText method
+            string textValue = NumberToText(fieldValue);
+
+            // Set the text of the label to the converted text value
+            label.Text = textValue;
         }
+
     }
 }
