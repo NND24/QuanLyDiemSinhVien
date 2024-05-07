@@ -38,8 +38,6 @@ namespace QuanLyDiemSinhVien.views
             cmbKhoa.ValueMember = "TENSERVER";
             cmbKhoa.SelectedValue = Program.servername;
 
-            MessageBox.Show(cmbKhoa.SelectedItem.ToString());
-
             if (Program.mGroup == "PGV")
             {
                 panelChonKhoa.Enabled = true;

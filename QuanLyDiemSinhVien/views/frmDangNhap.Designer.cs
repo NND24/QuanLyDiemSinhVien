@@ -37,7 +37,6 @@
             this.txtMatKhau = new DevExpress.XtraEditors.TextEdit();
             this.chkHienMatKhau = new System.Windows.Forms.CheckBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
@@ -77,11 +76,11 @@
             // cmbKhoa
             // 
             this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKhoa.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cmbKhoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKhoa.FormattingEnabled = true;
             this.cmbKhoa.Location = new System.Drawing.Point(203, 190);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(225, 24);
+            this.cmbKhoa.Size = new System.Drawing.Size(225, 27);
             this.cmbKhoa.TabIndex = 3;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
@@ -90,9 +89,9 @@
             this.txtTenDangNhap.EditValue = "HTT";
             this.txtTenDangNhap.Location = new System.Drawing.Point(203, 246);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtTenDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.Properties.Appearance.Options.UseFont = true;
-            this.txtTenDangNhap.Size = new System.Drawing.Size(225, 22);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(225, 26);
             this.txtTenDangNhap.TabIndex = 4;
             // 
             // txtMatKhau
@@ -100,16 +99,16 @@
             this.txtMatKhau.EditValue = "123456789";
             this.txtMatKhau.Location = new System.Drawing.Point(203, 302);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Properties.Appearance.Options.UseFont = true;
-            this.txtMatKhau.Size = new System.Drawing.Size(225, 22);
+            this.txtMatKhau.Size = new System.Drawing.Size(225, 26);
             this.txtMatKhau.TabIndex = 5;
             // 
             // chkHienMatKhau
             // 
             this.chkHienMatKhau.AutoSize = true;
             this.chkHienMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkHienMatKhau.Location = new System.Drawing.Point(59, 345);
+            this.chkHienMatKhau.Location = new System.Drawing.Point(59, 335);
             this.chkHienMatKhau.Name = "chkHienMatKhau";
             this.chkHienMatKhau.Size = new System.Drawing.Size(108, 20);
             this.chkHienMatKhau.TabIndex = 6;
@@ -123,22 +122,11 @@
             this.btnDangNhap.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Location = new System.Drawing.Point(102, 395);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(100, 35);
+            this.btnDangNhap.Size = new System.Drawing.Size(299, 44);
             this.btnDangNhap.TabIndex = 7;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThoat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(313, 395);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 35);
-            this.btnThoat.TabIndex = 8;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -156,7 +144,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 468);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.chkHienMatKhau);
             this.Controls.Add(this.txtMatKhau);
@@ -187,7 +174,6 @@
         private DevExpress.XtraEditors.TextEdit txtMatKhau;
         private System.Windows.Forms.CheckBox chkHienMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

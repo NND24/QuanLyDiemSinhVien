@@ -147,6 +147,7 @@
             // btnDangKyLTC
             // 
             this.btnDangKyLTC.Caption = "Đăng Ký Lớp Tín Chỉ";
+            this.btnDangKyLTC.Enabled = false;
             this.btnDangKyLTC.Id = 6;
             this.btnDangKyLTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangKyLTC.ImageOptions.Image")));
             this.btnDangKyLTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDangKyLTC.ImageOptions.LargeImage")));
@@ -156,6 +157,7 @@
             // btnXemDiem
             // 
             this.btnXemDiem.Caption = "Xem Điểm";
+            this.btnXemDiem.Enabled = false;
             this.btnXemDiem.Id = 7;
             this.btnXemDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemDiem.ImageOptions.Image")));
             this.btnXemDiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXemDiem.ImageOptions.LargeImage")));

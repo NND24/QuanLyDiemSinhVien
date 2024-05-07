@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportDSHocPhi));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtMaLop = new DevExpress.XtraEditors.TextEdit();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnIn = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtNienKhoa = new DevExpress.XtraEditors.TextEdit();
+            this.txtHocKy = new DevExpress.XtraEditors.TextEdit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHocKy.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -56,28 +56,19 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textEdit3);
+            this.panel2.Controls.Add(this.txtHocKy);
+            this.panel2.Controls.Add(this.txtNienKhoa);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textEdit2);
-            this.panel2.Controls.Add(this.textEdit1);
+            this.panel2.Controls.Add(this.txtMaLop);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.simpleButton2);
-            this.panel2.Controls.Add(this.simpleButton1);
+            this.panel2.Controls.Add(this.btnThoat);
+            this.panel2.Controls.Add(this.btnIn);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(916, 271);
             this.panel2.TabIndex = 1;
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(411, 127);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(212, 26);
-            this.textEdit3.TabIndex = 10;
             // 
             // label3
             // 
@@ -89,45 +80,37 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Học Kỳ:";
             // 
-            // textEdit2
+            // txtMaLop
             // 
-            this.textEdit2.Location = new System.Drawing.Point(411, 25);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(212, 26);
-            this.textEdit2.TabIndex = 8;
+            this.txtMaLop.Location = new System.Drawing.Point(411, 25);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLop.Properties.Appearance.Options.UseFont = true;
+            this.txtMaLop.Size = new System.Drawing.Size(212, 26);
+            this.txtMaLop.TabIndex = 8;
             // 
-            // textEdit1
+            // btnThoat
             // 
-            this.textEdit1.Location = new System.Drawing.Point(411, 76);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(212, 26);
-            this.textEdit1.TabIndex = 7;
+            this.btnThoat.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Appearance.Options.UseFont = true;
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(506, 185);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(88, 40);
+            this.btnThoat.TabIndex = 6;
+            this.btnThoat.Text = "Thoát";
             // 
-            // simpleButton2
+            // btnIn
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(506, 185);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(88, 40);
-            this.simpleButton2.TabIndex = 6;
-            this.simpleButton2.Text = "Thoát";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(330, 185);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(90, 40);
-            this.simpleButton1.TabIndex = 5;
-            this.simpleButton1.Text = "In";
+            this.btnIn.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIn.Appearance.Options.UseFont = true;
+            this.btnIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnIn.Location = new System.Drawing.Point(330, 185);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(90, 40);
+            this.btnIn.TabIndex = 5;
+            this.btnIn.Text = "In";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // label2
             // 
@@ -139,6 +122,24 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Niên Khóa:";
             // 
+            // txtNienKhoa
+            // 
+            this.txtNienKhoa.Location = new System.Drawing.Point(411, 80);
+            this.txtNienKhoa.Name = "txtNienKhoa";
+            this.txtNienKhoa.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNienKhoa.Properties.Appearance.Options.UseFont = true;
+            this.txtNienKhoa.Size = new System.Drawing.Size(212, 26);
+            this.txtNienKhoa.TabIndex = 10;
+            // 
+            // txtHocKy
+            // 
+            this.txtHocKy.Location = new System.Drawing.Point(411, 127);
+            this.txtHocKy.Name = "txtHocKy";
+            this.txtHocKy.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHocKy.Properties.Appearance.Options.UseFont = true;
+            this.txtHocKy.Size = new System.Drawing.Size(212, 26);
+            this.txtHocKy.TabIndex = 11;
+            // 
             // frmReportDSHocPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,9 +150,9 @@
             this.Text = "Danh sách đóng học phí";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHocKy.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,12 +160,12 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
+        private DevExpress.XtraEditors.SimpleButton btnIn;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtMaLop;
+        private DevExpress.XtraEditors.TextEdit txtHocKy;
+        private DevExpress.XtraEditors.TextEdit txtNienKhoa;
     }
 }
