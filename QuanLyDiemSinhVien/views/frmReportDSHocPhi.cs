@@ -25,7 +25,7 @@ namespace QuanLyDiemSinhVien.views
                 DataTable dt = Program.ExecSqlDataTable(cmd);
                 string tenKhoa = dt.Rows[0][0].ToString();
                 ReportHocPhi rpt = new ReportHocPhi(txtMaLop.Text, txtNienKhoa.Text, int.Parse(txtHocKy.Text));
-                rpt.lblKhoa.Text = "KHOA: " + tenKhoa.ToUpper();
+                rpt.lblKhoa.Text = "Khoa: " + tenKhoa.ToUpper();
                 rpt.lblMaLop.Text = "Mã lớp: " + txtMaLop.Text.ToUpper();
                 ReportPrintTool print = new ReportPrintTool(rpt);
                 print.ShowPreviewDialog();

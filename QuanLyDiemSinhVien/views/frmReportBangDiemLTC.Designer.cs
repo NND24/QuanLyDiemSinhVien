@@ -62,7 +62,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(916, 271);
+            this.panel2.Size = new System.Drawing.Size(1254, 756);
             this.panel2.TabIndex = 1;
             // 
             // cmbMonHoc
@@ -198,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 271);
+            this.ClientSize = new System.Drawing.Size(1254, 756);
             this.Controls.Add(this.panel2);
             this.Name = "frmReportBangDiemLTC";
             this.Text = "Bảng điểm theo lớp tín chỉ";
