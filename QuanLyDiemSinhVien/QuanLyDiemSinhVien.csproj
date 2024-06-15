@@ -98,6 +98,12 @@
     <Compile Include="reports\ReportBangDiemMonHoc.Designer.cs">
       <DependentUpon>ReportBangDiemMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="reports\ReportBangDiemTongKet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\ReportBangDiemTongKet.Designer.cs">
+      <DependentUpon>ReportBangDiemTongKet.cs</DependentUpon>
+    </Compile>
     <Compile Include="reports\ReportDSLopTinChi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </Compile>
     <EmbeddedResource Include="reports\ReportBangDiemMonHoc.resx">
       <DependentUpon>ReportBangDiemMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ReportBangDiemTongKet.resx">
+      <DependentUpon>ReportBangDiemTongKet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reports\ReportDSLopTinChi.resx">
       <DependentUpon>ReportDSLopTinChi.cs</DependentUpon>

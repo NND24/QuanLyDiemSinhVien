@@ -795,3 +795,4 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
     }
 }
+
