@@ -67,12 +67,12 @@
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnBatDau = new System.Windows.Forms.Button();
             this.panelControlNhapTT = new DevExpress.XtraEditors.PanelControl();
             this.cmbMonHoc = new System.Windows.Forms.ComboBox();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBatDau = new System.Windows.Forms.Button();
             this.cmbNhom = new System.Windows.Forms.ComboBox();
             this.cmbHocKy = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,7 +80,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbNienKhoa = new System.Windows.Forms.ComboBox();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelChonKhoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sPLAYDSLTCBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_HTCDataSet)).BeginInit();
@@ -89,8 +88,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControlNhapTT)).BeginInit();
             this.panelControlNhapTT.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelChonKhoa
@@ -371,7 +368,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panelControl1);
             this.panel1.Controls.Add(this.panelControlNhapTT);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 57);
@@ -379,10 +375,50 @@
             this.panel1.Size = new System.Drawing.Size(1186, 157);
             this.panel1.TabIndex = 18;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnThoat.Location = new System.Drawing.Point(733, 105);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(80, 30);
+            this.btnThoat.TabIndex = 4;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnCapNhat.Enabled = false;
+            this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnCapNhat.Location = new System.Drawing.Point(600, 105);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(80, 30);
+            this.btnCapNhat.TabIndex = 3;
+            this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
+            // btnBatDau
+            // 
+            this.btnBatDau.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnBatDau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatDau.Location = new System.Drawing.Point(464, 105);
+            this.btnBatDau.Name = "btnBatDau";
+            this.btnBatDau.Size = new System.Drawing.Size(80, 30);
+            this.btnBatDau.TabIndex = 2;
+            this.btnBatDau.Text = "Bắt Đầu";
+            this.btnBatDau.UseVisualStyleBackColor = false;
+            this.btnBatDau.Click += new System.EventHandler(this.btnBatDau_Click);
+            // 
             // panelControlNhapTT
             // 
+            this.panelControlNhapTT.Controls.Add(this.btnThoat);
             this.panelControlNhapTT.Controls.Add(this.cmbMonHoc);
+            this.panelControlNhapTT.Controls.Add(this.btnCapNhat);
             this.panelControlNhapTT.Controls.Add(this.label4);
+            this.panelControlNhapTT.Controls.Add(this.btnBatDau);
             this.panelControlNhapTT.Controls.Add(this.cmbNhom);
             this.panelControlNhapTT.Controls.Add(this.cmbHocKy);
             this.panelControlNhapTT.Controls.Add(this.label2);
@@ -393,71 +429,34 @@
             this.panelControlNhapTT.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControlNhapTT.Location = new System.Drawing.Point(0, 0);
             this.panelControlNhapTT.Name = "panelControlNhapTT";
-            this.panelControlNhapTT.Size = new System.Drawing.Size(682, 157);
+            this.panelControlNhapTT.Size = new System.Drawing.Size(1186, 157);
             this.panelControlNhapTT.TabIndex = 32;
             // 
             // cmbMonHoc
             // 
             this.cmbMonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMonHoc.FormattingEnabled = true;
-            this.cmbMonHoc.Location = new System.Drawing.Point(124, 100);
+            this.cmbMonHoc.Location = new System.Drawing.Point(673, 50);
             this.cmbMonHoc.Name = "cmbMonHoc";
             this.cmbMonHoc.Size = new System.Drawing.Size(160, 27);
             this.cmbMonHoc.TabIndex = 28;
             this.cmbMonHoc.SelectedIndexChanged += new System.EventHandler(this.cmbMonHoc_SelectedIndexChanged);
             // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnCapNhat.Enabled = false;
-            this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnCapNhat.Location = new System.Drawing.Point(166, 42);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(80, 30);
-            this.btnCapNhat.TabIndex = 3;
-            this.btnCapNhat.Text = "Cập Nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = false;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnThoat.Location = new System.Drawing.Point(292, 42);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(80, 30);
-            this.btnThoat.TabIndex = 4;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label4.Location = new System.Drawing.Point(15, 103);
+            this.label4.Location = new System.Drawing.Point(596, 53);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 19);
+            this.label4.Size = new System.Drawing.Size(71, 19);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Mã Môn Học:";
-            // 
-            // btnBatDau
-            // 
-            this.btnBatDau.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnBatDau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBatDau.Location = new System.Drawing.Point(33, 42);
-            this.btnBatDau.Name = "btnBatDau";
-            this.btnBatDau.Size = new System.Drawing.Size(80, 30);
-            this.btnBatDau.TabIndex = 2;
-            this.btnBatDau.Text = "Bắt Đầu";
-            this.btnBatDau.UseVisualStyleBackColor = false;
-            this.btnBatDau.Click += new System.EventHandler(this.btnBatDau_Click);
+            this.label4.Text = "Môn Học:";
             // 
             // cmbNhom
             // 
             this.cmbNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNhom.FormattingEnabled = true;
-            this.cmbNhom.Location = new System.Drawing.Point(384, 100);
+            this.cmbNhom.Location = new System.Drawing.Point(954, 50);
             this.cmbNhom.Name = "cmbNhom";
             this.cmbNhom.Size = new System.Drawing.Size(160, 27);
             this.cmbNhom.TabIndex = 30;
@@ -486,7 +485,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label6.Location = new System.Drawing.Point(317, 103);
+            this.label6.Location = new System.Drawing.Point(898, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 19);
             this.label6.TabIndex = 22;
@@ -522,17 +521,6 @@
             this.cmbNienKhoa.TabIndex = 27;
             this.cmbNienKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbNienKhoa_SelectedIndexChanged);
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.btnThoat);
-            this.panelControl1.Controls.Add(this.btnCapNhat);
-            this.panelControl1.Controls.Add(this.btnBatDau);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(682, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(504, 157);
-            this.panelControl1.TabIndex = 33;
-            // 
             // frmNhapDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,8 +542,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControlNhapTT)).EndInit();
             this.panelControlNhapTT.ResumeLayout(false);
             this.panelControlNhapTT.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -611,6 +597,5 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnBatDau;
         private System.Windows.Forms.Button btnCapNhat;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
     }
 }

@@ -61,7 +61,7 @@ namespace QuanLyDiemSinhVien.views
             DataTable dt = Program.ExecSqlDataTable(cmd);
 
             cmbMonHoc.DataSource = dt;
-            cmbMonHoc.DisplayMember = "MAMH";
+            cmbMonHoc.DisplayMember = "TENMH";
             cmbMonHoc.ValueMember = "MAMH";
         }
 
@@ -126,7 +126,7 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnBatDau_Click(object sender, System.EventArgs e)
         {
-            string cmd = "EXEC SP_LAY_DS_LTC '" + cmbNienKhoa.Text + "', '" + cmbHocKy.Text + "', '" + cmbNhom.Text + "', '" + cmbMonHoc.Text + "'";
+            string cmd = "EXEC SP_LAY_DS_LTC '" + cmbNienKhoa.Text + "', '" + cmbHocKy.Text + "', '" + cmbNhom.Text + "', '" + cmbMonHoc.SelectedValue.ToString() + "'";
             ltcTable = Program.ExecSqlDataTable(cmd);
             if (ltcTable.Rows.Count > 0)
             {

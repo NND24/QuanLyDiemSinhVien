@@ -104,6 +104,12 @@
     <Compile Include="reports\ReportDSLopTinChi.Designer.cs">
       <DependentUpon>ReportDSLopTinChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="reports\ReportDSSVDangKyLTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\ReportDSSVDangKyLTC.Designer.cs">
+      <DependentUpon>ReportDSSVDangKyLTC.cs</DependentUpon>
+    </Compile>
     <Compile Include="reports\ReportHocPhi.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -233,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reports\ReportDSLopTinChi.resx">
       <DependentUpon>ReportDSLopTinChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ReportDSSVDangKyLTC.resx">
+      <DependentUpon>ReportDSSVDangKyLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reports\ReportHocPhi.resx">
       <DependentUpon>ReportHocPhi.cs</DependentUpon>

@@ -1,8 +1,4 @@
-﻿using DevExpress.XtraReports.UI;
-using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Drawing;
+﻿using System;
 
 namespace QuanLyDiemSinhVien.reports
 {
@@ -21,6 +17,5 @@ namespace QuanLyDiemSinhVien.reports
             this.sqlDataSource1.Queries[0].Parameters[2].Value = maMH;
             this.sqlDataSource1.Fill();
         }
-
     }
 }
