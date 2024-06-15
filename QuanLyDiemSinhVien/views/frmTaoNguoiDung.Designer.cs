@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioGroupNhom = new System.Windows.Forms.GroupBox();
+            this.rbtnPKT = new System.Windows.Forms.RadioButton();
+            this.rbtnKhoa = new System.Windows.Forms.RadioButton();
+            this.rbtnPGV = new System.Windows.Forms.RadioButton();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.cmbGiangVien = new System.Windows.Forms.ComboBox();
@@ -43,20 +47,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gIANGVIENTableAdapter = new QuanLyDiemSinhVien.QLDSV_HTCDataSetTableAdapters.GIANGVIENTableAdapter();
             this.tableAdapterManager = new QuanLyDiemSinhVien.QLDSV_HTCDataSetTableAdapters.TableAdapterManager();
-            this.radioGroupNhom = new System.Windows.Forms.GroupBox();
-            this.rbtnPGV = new System.Windows.Forms.RadioButton();
-            this.rbtnKhoa = new System.Windows.Forms.RadioButton();
-            this.rbtnPKT = new System.Windows.Forms.RadioButton();
+            this.chkHienMatKhau = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
+            this.radioGroupNhom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIANGVIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_HTCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).BeginInit();
-            this.radioGroupNhom.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkHienMatKhau);
             this.panel1.Controls.Add(this.radioGroupNhom);
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.btnDangKy);
@@ -72,6 +74,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1186, 557);
             this.panel1.TabIndex = 0;
+            // 
+            // radioGroupNhom
+            // 
+            this.radioGroupNhom.Controls.Add(this.rbtnPKT);
+            this.radioGroupNhom.Controls.Add(this.rbtnKhoa);
+            this.radioGroupNhom.Controls.Add(this.rbtnPGV);
+            this.radioGroupNhom.Location = new System.Drawing.Point(514, 250);
+            this.radioGroupNhom.Name = "radioGroupNhom";
+            this.radioGroupNhom.Size = new System.Drawing.Size(283, 52);
+            this.radioGroupNhom.TabIndex = 33;
+            this.radioGroupNhom.TabStop = false;
+            // 
+            // rbtnPKT
+            // 
+            this.rbtnPKT.AutoSize = true;
+            this.rbtnPKT.Location = new System.Drawing.Point(216, 20);
+            this.rbtnPKT.Name = "rbtnPKT";
+            this.rbtnPKT.Size = new System.Drawing.Size(43, 17);
+            this.rbtnPKT.TabIndex = 2;
+            this.rbtnPKT.TabStop = true;
+            this.rbtnPKT.Text = "PKT";
+            this.rbtnPKT.UseVisualStyleBackColor = true;
+            // 
+            // rbtnKhoa
+            // 
+            this.rbtnKhoa.AutoSize = true;
+            this.rbtnKhoa.Location = new System.Drawing.Point(107, 20);
+            this.rbtnKhoa.Name = "rbtnKhoa";
+            this.rbtnKhoa.Size = new System.Drawing.Size(53, 17);
+            this.rbtnKhoa.TabIndex = 1;
+            this.rbtnKhoa.TabStop = true;
+            this.rbtnKhoa.Text = "KHOA";
+            this.rbtnKhoa.UseVisualStyleBackColor = true;
+            // 
+            // rbtnPGV
+            // 
+            this.rbtnPGV.AutoSize = true;
+            this.rbtnPGV.Location = new System.Drawing.Point(19, 20);
+            this.rbtnPGV.Name = "rbtnPGV";
+            this.rbtnPGV.Size = new System.Drawing.Size(44, 17);
+            this.rbtnPGV.TabIndex = 0;
+            this.rbtnPGV.TabStop = true;
+            this.rbtnPGV.Text = "PGV";
+            this.rbtnPGV.UseVisualStyleBackColor = true;
             // 
             // btnHuy
             // 
@@ -196,49 +242,17 @@
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QuanLyDiemSinhVien.QLDSV_HTCDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // radioGroupNhom
+            // chkHienMatKhau
             // 
-            this.radioGroupNhom.Controls.Add(this.rbtnPKT);
-            this.radioGroupNhom.Controls.Add(this.rbtnKhoa);
-            this.radioGroupNhom.Controls.Add(this.rbtnPGV);
-            this.radioGroupNhom.Location = new System.Drawing.Point(514, 250);
-            this.radioGroupNhom.Name = "radioGroupNhom";
-            this.radioGroupNhom.Size = new System.Drawing.Size(283, 52);
-            this.radioGroupNhom.TabIndex = 33;
-            this.radioGroupNhom.TabStop = false;
-            // 
-            // rbtnPGV
-            // 
-            this.rbtnPGV.AutoSize = true;
-            this.rbtnPGV.Location = new System.Drawing.Point(19, 20);
-            this.rbtnPGV.Name = "rbtnPGV";
-            this.rbtnPGV.Size = new System.Drawing.Size(44, 17);
-            this.rbtnPGV.TabIndex = 0;
-            this.rbtnPGV.TabStop = true;
-            this.rbtnPGV.Text = "PGV";
-            this.rbtnPGV.UseVisualStyleBackColor = true;
-            // 
-            // rbtnKhoa
-            // 
-            this.rbtnKhoa.AutoSize = true;
-            this.rbtnKhoa.Location = new System.Drawing.Point(107, 20);
-            this.rbtnKhoa.Name = "rbtnKhoa";
-            this.rbtnKhoa.Size = new System.Drawing.Size(53, 17);
-            this.rbtnKhoa.TabIndex = 1;
-            this.rbtnKhoa.TabStop = true;
-            this.rbtnKhoa.Text = "KHOA";
-            this.rbtnKhoa.UseVisualStyleBackColor = true;
-            // 
-            // rbtnPKT
-            // 
-            this.rbtnPKT.AutoSize = true;
-            this.rbtnPKT.Location = new System.Drawing.Point(216, 20);
-            this.rbtnPKT.Name = "rbtnPKT";
-            this.rbtnPKT.Size = new System.Drawing.Size(43, 17);
-            this.rbtnPKT.TabIndex = 2;
-            this.rbtnPKT.TabStop = true;
-            this.rbtnPKT.Text = "PKT";
-            this.rbtnPKT.UseVisualStyleBackColor = true;
+            this.chkHienMatKhau.AutoSize = true;
+            this.chkHienMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkHienMatKhau.Location = new System.Drawing.Point(788, 166);
+            this.chkHienMatKhau.Name = "chkHienMatKhau";
+            this.chkHienMatKhau.Size = new System.Drawing.Size(108, 20);
+            this.chkHienMatKhau.TabIndex = 34;
+            this.chkHienMatKhau.Text = "Hiện mật khẩu";
+            this.chkHienMatKhau.UseVisualStyleBackColor = true;
+            this.chkHienMatKhau.CheckedChanged += new System.EventHandler(this.chkHienMatKhau_CheckedChanged);
             // 
             // frmTaoNguoiDung
             // 
@@ -251,12 +265,12 @@
             this.Load += new System.EventHandler(this.frmTaoNguoiDung_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.radioGroupNhom.ResumeLayout(false);
+            this.radioGroupNhom.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gIANGVIENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSV_HTCDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDangNhap.Properties)).EndInit();
-            this.radioGroupNhom.ResumeLayout(false);
-            this.radioGroupNhom.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -281,5 +295,6 @@
         private System.Windows.Forms.RadioButton rbtnKhoa;
         private System.Windows.Forms.RadioButton rbtnPGV;
         internal System.Windows.Forms.GroupBox radioGroupNhom;
+        private System.Windows.Forms.CheckBox chkHienMatKhau;
     }
 }

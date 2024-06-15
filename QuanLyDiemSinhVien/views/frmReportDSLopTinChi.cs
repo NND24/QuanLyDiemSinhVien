@@ -19,7 +19,7 @@ namespace QuanLyDiemSinhVien.views
             cmbKhoa.DisplayMember = "TENPHONG";
             cmbKhoa.ValueMember = "TENSERVER";
             cmbKhoa.SelectedIndex = Program.mPhongBan;
-            if (Program.mGroup == "KHOA")
+            if (Program.mGroup == "PGV")
             {
                 cmbKhoa.Enabled = true;
             }
@@ -93,9 +93,9 @@ namespace QuanLyDiemSinhVien.views
             {
                 ReportDSLopTinChi rpt = new ReportDSLopTinChi(cmbNienKhoa.Text, int.Parse(cmbHocKy.Text));
 
-                rpt.lbKhoa.Text = "KHOA " + cmbKhoa.Text.ToUpper();
-                rpt.lbHocKy.Text = cmbNienKhoa.Text;
-                rpt.lbHocKy.Text = cmbHocKy.Text;
+                rpt.lblKhoa.Text = "KHOA " + cmbKhoa.Text.ToUpper();
+                rpt.lblNienKhoa.Text = cmbNienKhoa.Text;
+                rpt.lblHocKy.Text = cmbHocKy.Text;
 
                 ReportPrintTool print = new ReportPrintTool(rpt);
                 print.ShowPreviewDialog();

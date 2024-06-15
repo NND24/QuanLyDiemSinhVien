@@ -12,6 +12,10 @@ namespace QuanLyDiemSinhVien.views
         public frmReportDSSinhVien()
         {
             InitializeComponent();
+            cmbNienKhoa.SelectedIndexChanged += cmbNienKhoa_SelectedIndexChanged;
+            cmbHocKy.SelectedIndexChanged += cmbHocKy_SelectedIndexChanged;
+            cmbMonHoc.SelectedIndexChanged += cmbMonHoc_SelectedIndexChanged;
+            cmbNhom.SelectedIndexChanged += cmbKhoa_SelectedIndexChanged;
         }
 
         private void frmReportDSSinhVien_Load(object sender, System.EventArgs e)

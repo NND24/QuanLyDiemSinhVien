@@ -9,11 +9,17 @@ namespace QuanLyDiemSinhVien.views
     {
         DataTable dkTable = new DataTable();
         DataTable ltcTable = new DataTable();
-        int maLTC;
+        int maLTC = 0;
 
         public frmNhapDiem()
         {
             InitializeComponent();
+            cmbNienKhoa.SelectedIndexChanged += cmbNienKhoa_SelectedIndexChanged;
+            cmbHocKy.SelectedIndexChanged += cmbHocKy_SelectedIndexChanged;
+            cmbMonHoc.SelectedIndexChanged += cmbMonHoc_SelectedIndexChanged;
+            cmbKhoa.SelectedIndexChanged += cmbKhoa_SelectedIndexChanged;
+            btnCapNhat.Click += btnCapNhat_Click;
+            btnThoat.Click += btnThoat_Click;
         }
 
         private void frmNhapDiem_Load(object sender, System.EventArgs e)
@@ -121,35 +127,45 @@ namespace QuanLyDiemSinhVien.views
 
         private void cmbMonHoc_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            loadCmbNhom(cmbNienKhoa.Text, cmbHocKy.Text, cmbMonHoc.Text);
+            if (cmbMonHoc.SelectedIndex >= 0 && cmbMonHoc.SelectedValue != null)
+            {
+                loadCmbNhom(cmbNienKhoa.Text, cmbHocKy.Text, cmbMonHoc.SelectedValue.ToString());
+            }
         }
 
         private void btnBatDau_Click(object sender, System.EventArgs e)
         {
-            string cmd = "EXEC SP_LAY_DS_LTC '" + cmbNienKhoa.Text + "', '" + cmbHocKy.Text + "', '" + cmbNhom.Text + "', '" + cmbMonHoc.SelectedValue.ToString() + "'";
+            string cmd = "EXEC SP_TIM_MA_LTC '" + cmbNienKhoa.Text + "', '" + cmbHocKy.Text + "', '" + cmbNhom.Text + "', '" + cmbMonHoc.SelectedValue.ToString() + "'";
             ltcTable = Program.ExecSqlDataTable(cmd);
             if (ltcTable.Rows.Count > 0)
             {
                 maLTC = Convert.ToInt32(ltcTable.Rows[0]["MaLTC"].ToString());
             }
-            btnCapNhat.Enabled = true;
-            cmbKhoa.Enabled = false;
-            loadTableDK();
-            panelControlNhapTT.Enabled = btnBatDau.Enabled = false;
-            this.MASV.OptionsColumn.AllowFocus = false;
-            this.HOTEN.OptionsColumn.AllowFocus = false;
-            this.DIEM_TK.OptionsColumn.AllowFocus = false;
-            this.DIEM_CC.OptionsColumn.AllowFocus = true;
-            this.DIEM_GK.OptionsColumn.AllowFocus = true;
-            this.DIEM_CK.OptionsColumn.AllowFocus = true;
-            gc_DSSV_DangKy.Enabled = true;
-            this.btnCapNhat.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnBatDau.BackColor = System.Drawing.SystemColors.ButtonShadow;
+
+            if (maLTC != 0)
+            {
+                btnCapNhat.Enabled = true;
+                cmbKhoa.Enabled = false;
+                loadTableDK();
+                cmbNienKhoa.Enabled = cmbHocKy.Enabled = cmbMonHoc.Enabled = cmbNhom.Enabled = btnBatDau.Enabled = false;
+                this.MASV.OptionsColumn.AllowFocus = false;
+                this.HOTEN.OptionsColumn.AllowFocus = false;
+                this.DIEM_TK.OptionsColumn.AllowFocus = false;
+                this.DIEM_CC.OptionsColumn.AllowFocus = true;
+                this.DIEM_GK.OptionsColumn.AllowFocus = true;
+                this.DIEM_CK.OptionsColumn.AllowFocus = true;
+                gc_DSSV_DangKy.Enabled = true;
+                this.btnCapNhat.BackColor = System.Drawing.SystemColors.MenuHighlight;
+                this.btnBatDau.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy lớp tín chỉ");
+            }
         }
 
         private void btnCapNhat_Click(object sender, System.EventArgs e)
         {
-            MessageBox.Show("1");
             DataTable dt = new DataTable();
             dt.Columns.Add("MALTC", typeof(int));
             dt.Columns.Add("MASV", typeof(String));
@@ -177,7 +193,7 @@ namespace QuanLyDiemSinhVien.views
                 sqlCmd.Parameters.Add(para);
                 sqlCmd.ExecuteNonQuery();
                 loadTableDK();
-                panelControlNhapTT.Enabled = btnBatDau.Enabled = true;
+                cmbNienKhoa.Enabled = cmbHocKy.Enabled = cmbMonHoc.Enabled = cmbNhom.Enabled = btnBatDau.Enabled = true;
                 btnCapNhat.Enabled = false;
                 cmbKhoa.Enabled = true;
                 this.MASV.OptionsColumn.AllowEdit = false;
@@ -214,6 +230,7 @@ namespace QuanLyDiemSinhVien.views
                 this.Close();
             }
         }
+
 
         private void gv_DSSV_DangKy_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {

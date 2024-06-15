@@ -488,7 +488,7 @@ namespace QuanLyDiemSinhVien.views
 
         private void gridViewSV_RowCountChanged(object sender, EventArgs e)
         {
-            if (bdsSinhVien.Count > 0 && flagModeSV.Equals("ADDSV"))
+            if (bdsSinhVien.Count > 0 && !flagModeSV.Equals("ADDSV"))
             {
                 btnXoaSV.Enabled = btnSuaSV.Enabled = true;
             }

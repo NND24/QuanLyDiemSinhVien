@@ -67,12 +67,12 @@
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnBatDau = new System.Windows.Forms.Button();
             this.panelControlNhapTT = new DevExpress.XtraEditors.PanelControl();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.cmbMonHoc = new System.Windows.Forms.ComboBox();
+            this.btnCapNhat = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnBatDau = new System.Windows.Forms.Button();
             this.cmbNhom = new System.Windows.Forms.ComboBox();
             this.cmbHocKy = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -375,43 +375,6 @@
             this.panel1.Size = new System.Drawing.Size(1186, 157);
             this.panel1.TabIndex = 18;
             // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnThoat.Location = new System.Drawing.Point(733, 105);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(80, 30);
-            this.btnThoat.TabIndex = 4;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnCapNhat.Enabled = false;
-            this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.btnCapNhat.Location = new System.Drawing.Point(600, 105);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(80, 30);
-            this.btnCapNhat.TabIndex = 3;
-            this.btnCapNhat.Text = "Cập Nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = false;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
-            // 
-            // btnBatDau
-            // 
-            this.btnBatDau.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnBatDau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBatDau.Location = new System.Drawing.Point(464, 105);
-            this.btnBatDau.Name = "btnBatDau";
-            this.btnBatDau.Size = new System.Drawing.Size(80, 30);
-            this.btnBatDau.TabIndex = 2;
-            this.btnBatDau.Text = "Bắt Đầu";
-            this.btnBatDau.UseVisualStyleBackColor = false;
-            this.btnBatDau.Click += new System.EventHandler(this.btnBatDau_Click);
-            // 
             // panelControlNhapTT
             // 
             this.panelControlNhapTT.Controls.Add(this.btnThoat);
@@ -426,37 +389,77 @@
             this.panelControlNhapTT.Controls.Add(this.label3);
             this.panelControlNhapTT.Controls.Add(this.label5);
             this.panelControlNhapTT.Controls.Add(this.cmbNienKhoa);
-            this.panelControlNhapTT.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControlNhapTT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControlNhapTT.Location = new System.Drawing.Point(0, 0);
             this.panelControlNhapTT.Name = "panelControlNhapTT";
             this.panelControlNhapTT.Size = new System.Drawing.Size(1186, 157);
             this.panelControlNhapTT.TabIndex = 32;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnThoat.Location = new System.Drawing.Point(772, 105);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(80, 30);
+            this.btnThoat.TabIndex = 4;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // cmbMonHoc
             // 
             this.cmbMonHoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMonHoc.FormattingEnabled = true;
-            this.cmbMonHoc.Location = new System.Drawing.Point(673, 50);
+            this.cmbMonHoc.Location = new System.Drawing.Point(743, 53);
             this.cmbMonHoc.Name = "cmbMonHoc";
-            this.cmbMonHoc.Size = new System.Drawing.Size(160, 27);
+            this.cmbMonHoc.Size = new System.Drawing.Size(230, 27);
             this.cmbMonHoc.TabIndex = 28;
             this.cmbMonHoc.SelectedIndexChanged += new System.EventHandler(this.cmbMonHoc_SelectedIndexChanged);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnCapNhat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCapNhat.Enabled = false;
+            this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.btnCapNhat.Location = new System.Drawing.Point(639, 105);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(80, 30);
+            this.btnCapNhat.TabIndex = 3;
+            this.btnCapNhat.Text = "Cập Nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label4.Location = new System.Drawing.Point(596, 53);
+            this.label4.Location = new System.Drawing.Point(666, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 19);
             this.label4.TabIndex = 20;
             this.label4.Text = "Môn Học:";
             // 
+            // btnBatDau
+            // 
+            this.btnBatDau.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnBatDau.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBatDau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatDau.Location = new System.Drawing.Point(503, 105);
+            this.btnBatDau.Name = "btnBatDau";
+            this.btnBatDau.Size = new System.Drawing.Size(80, 30);
+            this.btnBatDau.TabIndex = 2;
+            this.btnBatDau.Text = "Bắt Đầu";
+            this.btnBatDau.UseVisualStyleBackColor = false;
+            this.btnBatDau.Click += new System.EventHandler(this.btnBatDau_Click);
+            // 
             // cmbNhom
             // 
             this.cmbNhom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNhom.FormattingEnabled = true;
-            this.cmbNhom.Location = new System.Drawing.Point(954, 50);
+            this.cmbNhom.Location = new System.Drawing.Point(1096, 53);
             this.cmbNhom.Name = "cmbNhom";
             this.cmbNhom.Size = new System.Drawing.Size(160, 27);
             this.cmbNhom.TabIndex = 30;
@@ -465,7 +468,7 @@
             // 
             this.cmbHocKy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHocKy.FormattingEnabled = true;
-            this.cmbHocKy.Location = new System.Drawing.Point(384, 50);
+            this.cmbHocKy.Location = new System.Drawing.Point(454, 53);
             this.cmbHocKy.Name = "cmbHocKy";
             this.cmbHocKy.Size = new System.Drawing.Size(160, 27);
             this.cmbHocKy.TabIndex = 29;
@@ -485,7 +488,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label6.Location = new System.Drawing.Point(898, 53);
+            this.label6.Location = new System.Drawing.Point(1030, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 19);
             this.label6.TabIndex = 22;
@@ -495,7 +498,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label3.Location = new System.Drawing.Point(18, 53);
+            this.label3.Location = new System.Drawing.Point(61, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 19);
             this.label3.TabIndex = 19;
@@ -505,7 +508,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.label5.Location = new System.Drawing.Point(317, 53);
+            this.label5.Location = new System.Drawing.Point(387, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 19);
             this.label5.TabIndex = 21;
@@ -515,7 +518,7 @@
             // 
             this.cmbNienKhoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNienKhoa.FormattingEnabled = true;
-            this.cmbNienKhoa.Location = new System.Drawing.Point(124, 50);
+            this.cmbNienKhoa.Location = new System.Drawing.Point(167, 53);
             this.cmbNienKhoa.Name = "cmbNienKhoa";
             this.cmbNienKhoa.Size = new System.Drawing.Size(160, 27);
             this.cmbNienKhoa.TabIndex = 27;

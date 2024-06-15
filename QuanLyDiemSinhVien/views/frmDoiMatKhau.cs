@@ -9,6 +9,9 @@ namespace QuanLyDiemSinhVien.views
         public frmDoiMatKhau()
         {
             InitializeComponent();
+            txtMatKhauHT.Properties.UseSystemPasswordChar = true;
+            txtMatKhauMoi.Properties.UseSystemPasswordChar = true;
+            txtNhapLaiMK.Properties.UseSystemPasswordChar = true;
         }
 
         private void frmDoiMatKhau_Load(object sender, EventArgs e)
@@ -110,6 +113,22 @@ namespace QuanLyDiemSinhVien.views
             txtMatKhauHT.Text = null;
             txtMatKhauMoi.Text = null;
             txtNhapLaiMK.Text = null;
+        }
+
+        private void chkHienMatKhau_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkHienMatKhau.Checked)
+            {
+                txtMatKhauHT.Properties.UseSystemPasswordChar = false;
+                txtMatKhauMoi.Properties.UseSystemPasswordChar = false;
+                txtNhapLaiMK.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtMatKhauHT.Properties.UseSystemPasswordChar = true;
+                txtMatKhauMoi.Properties.UseSystemPasswordChar = true;
+                txtNhapLaiMK.Properties.UseSystemPasswordChar = true;
+            }
         }
     }
 }

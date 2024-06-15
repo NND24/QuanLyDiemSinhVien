@@ -7,6 +7,7 @@ namespace QuanLyDiemSinhVien.views
         public frmTaoNguoiDung()
         {
             InitializeComponent();
+            txtMatKhau.Properties.UseSystemPasswordChar = true;
         }
 
         private void btnHuy_Click(object sender, System.EventArgs e)
@@ -68,6 +69,18 @@ namespace QuanLyDiemSinhVien.views
                 {
                     MessageBox.Show("Tạo tài khoản thất bại!");
                 }
+            }
+        }
+
+        private void chkHienMatKhau_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (chkHienMatKhau.Checked)
+            {
+                txtMatKhau.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtMatKhau.Properties.UseSystemPasswordChar = true;
             }
         }
     }
