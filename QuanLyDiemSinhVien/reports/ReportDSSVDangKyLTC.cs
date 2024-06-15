@@ -10,7 +10,6 @@ namespace QuanLyDiemSinhVien.reports
     {
         public ReportDSSVDangKyLTC()
         {
-
         }
 
         public ReportDSSVDangKyLTC(String nienKhoa, int hocKy, String maMH, int nhom)
