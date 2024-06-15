@@ -71,7 +71,7 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtTenDangNhap.Text.Trim() == "" || txtMatKhau.Text.Trim() == "")
+            if (txtTenDangNhap.Text.Trim() == "")
             {
                 MessageBox.Show("Tài khoản và mật khẩu không hợp lệ", "", MessageBoxButtons.OK);
                 return;

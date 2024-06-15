@@ -12,6 +12,8 @@ namespace QuanLyDiemSinhVien.views
             InitializeComponent();
             if (Program.mGroup.Equals("PGV"))
             {
+                ribbonPageQuanLy.Visible = true;
+                ribbonPageBaoCao.Visible = true;
                 ribbonPageQuanLyKhoa_PGV.Visible = true;
                 ribbonPageQuanLyKhoa_PGV.Enabled = true;
                 reportPagePGV_Khoa.Visible = true;
@@ -22,6 +24,8 @@ namespace QuanLyDiemSinhVien.views
             }
             else if (Program.mGroup.Equals("KHOA"))
             {
+                ribbonPageQuanLy.Visible = true;
+                ribbonPageBaoCao.Visible = true;
                 ribbonPageQuanLyKhoa_PGV.Visible = true;
                 ribbonPageQuanLyKhoa_PGV.Enabled = true;
                 reportPagePGV_Khoa.Visible = true;
@@ -30,22 +34,29 @@ namespace QuanLyDiemSinhVien.views
                 ribbon.SelectedPage = ribbonPageQuanLy;
                 btnDoiMatKhau.Enabled = true;
             }
-            else if (Program.mGroup.Equals("SINHVIEN"))
+            else if (Program.mGroup.Equals("SV"))
             {
                 ribbonPageSinhVien.Visible = true;
                 ribbonPageBaoCao.Visible = false;
                 ribbonPageQuanLy.Visible = false;
+                btnDangKyLTC.Enabled = true;
+                btnXemDiem.Enabled = true;
                 btnTaoNguoiDung.Visibility = BarItemVisibility.Never;
                 ribbon.SelectedPage = ribbonPageSinhVien;
+                btnDoiMatKhau.Enabled = true;
             }
             else if (Program.mGroup.Equals("PKT"))
             {
+                ribbonPageQuanLy.Visible = true;
+                ribbonPageBaoCao.Visible = true;
                 ribbonQuanLyPKT.Visible = true;
                 ribbonQuanLyPKT.Enabled = true;
                 reportPagePKT.Visible = true;
                 reportPagePKT.Enabled = true;
                 btnTaoNguoiDung.Enabled = true;
                 btnDoiMatKhau.Enabled = true;
+                ribbonPageQuanLyKhoa_PGV.Visible = false;
+                reportPagePGV_Khoa.Visible = false;
             }
         }
 
