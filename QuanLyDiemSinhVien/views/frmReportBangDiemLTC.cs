@@ -52,7 +52,7 @@ namespace QuanLyDiemSinhVien.views
             DataTable dt = Program.ExecSqlDataTable(cmd);
 
             cmbMonHoc.DataSource = dt;
-            cmbMonHoc.DisplayMember = "MAMH";
+            cmbMonHoc.DisplayMember = "TENMH";
             cmbMonHoc.ValueMember = "MAMH";
         }
 
@@ -104,7 +104,7 @@ namespace QuanLyDiemSinhVien.views
 
         private void cmbMonHoc_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            loadCmbNhom(cmbNienKhoa.Text, cmbHocKy.Text, cmbMonHoc.Text);
+            loadCmbNhom(cmbNienKhoa.Text, cmbHocKy.Text, cmbMonHoc.SelectedValue.ToString());
         }
 
         private void btnThoat_Click(object sender, System.EventArgs e)

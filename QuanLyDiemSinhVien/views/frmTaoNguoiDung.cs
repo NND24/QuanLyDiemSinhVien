@@ -19,18 +19,15 @@ namespace QuanLyDiemSinhVien.views
             this.gIANGVIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gIANGVIENTableAdapter.Fill(this.qLDSV_HTCDataSet.GIANGVIEN);
 
-            if (Program.mGroup == "KHOA" || Program.mGroup == "PGV")
+            if (Program.mGroup == "KHOA")
             {
-                if (Program.mGroup == "KHOA")
-                {
-                    rbtnKhoa.Checked = true;
-                    rbtnPGV.Enabled = rbtnPKT.Enabled = false;
-                }
-                else
-                {
-                    rbtnPGV.Checked = true;
-                    rbtnPKT.Enabled = false;
-                }
+                rbtnKhoa.Checked = true;
+                rbtnPGV.Enabled = rbtnPKT.Enabled = false;
+            }
+            else if (Program.mGroup == "PGV")
+            {
+                rbtnPGV.Checked = true;
+                rbtnKhoa.Enabled = rbtnPKT.Enabled = false;
             }
             else
             {

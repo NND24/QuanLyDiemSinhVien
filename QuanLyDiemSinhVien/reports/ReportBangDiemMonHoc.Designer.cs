@@ -244,7 +244,7 @@
             this.lblKhoa.Multiline = true;
             this.lblKhoa.Name = "lblKhoa";
             this.lblKhoa.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblKhoa.SizeF = new System.Drawing.SizeF(147.9007F, 23.00002F);
+            this.lblKhoa.SizeF = new System.Drawing.SizeF(210.1262F, 23.00002F);
             this.lblKhoa.StylePriority.UseTextAlignment = false;
             this.lblKhoa.Text = "XXXXXXXXXXXX";
             this.lblKhoa.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -334,7 +334,7 @@
             this.xrTableCell2.Multiline = true;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
-            this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell2.Weight = 1.3854179154440365D;
             // 
             // xrTableCell3
@@ -344,7 +344,7 @@
             this.xrTableCell3.Multiline = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
-            this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell3.Weight = 0.80063168516785477D;
             // 
             // xrTableCell4

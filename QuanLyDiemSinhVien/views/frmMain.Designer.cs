@@ -255,6 +255,7 @@
             this.ribbonPageQuanLy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageQuanLy.ImageOptions.Image")));
             this.ribbonPageQuanLy.Name = "ribbonPageQuanLy";
             this.ribbonPageQuanLy.Text = "Quản Lý";
+            this.ribbonPageQuanLy.Visible = false;
             // 
             // ribbonPageQuanLyKhoa_PGV
             // 
@@ -278,6 +279,7 @@
             this.ribbonPageSinhVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageSinhVien.ImageOptions.Image")));
             this.ribbonPageSinhVien.Name = "ribbonPageSinhVien";
             this.ribbonPageSinhVien.Text = "Sinh Viên";
+            this.ribbonPageSinhVien.Visible = false;
             // 
             // ribbonPageGroup2
             // 
@@ -293,6 +295,7 @@
             this.ribbonPageBaoCao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ribbonPageBaoCao.ImageOptions.Image")));
             this.ribbonPageBaoCao.Name = "ribbonPageBaoCao";
             this.ribbonPageBaoCao.Text = "Báo Cáo";
+            this.ribbonPageBaoCao.Visible = false;
             // 
             // reportPagePGV_Khoa
             // 

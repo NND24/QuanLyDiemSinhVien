@@ -1,8 +1,9 @@
-﻿using System.Windows.Forms;
-using System.Data;
-using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraReports.UI;
 using QuanLyDiemSinhVien.reports;
 using System;
+using System.Data;
+using System.Windows.Forms;
+
 namespace QuanLyDiemSinhVien.views
 {
     public partial class frmReportDSSinhVien : DevExpress.XtraEditors.XtraForm
@@ -54,7 +55,7 @@ namespace QuanLyDiemSinhVien.views
             else
             {
                 //loadCmbNienKhoa();
-               //loadCmbHocKy(cmbNienKhoa.Text);
+                //loadCmbHocKy(cmbNienKhoa.Text);
             }
         }
 

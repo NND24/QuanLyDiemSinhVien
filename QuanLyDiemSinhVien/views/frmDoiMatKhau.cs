@@ -20,46 +20,88 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMatKhauHT.Text != Program.password)
+            if (txtChucVu.Text == "SV")
             {
-                MessageBox.Show("Mật khẩu hiện tại không đúng!");
-                return;
-            }
-
-            if (txtMatKhauMoi.Text != txtNhapLaiMK.Text)
-            {
-                MessageBox.Show("Xác nhận mật khẩu không trùng khớp!");
-                return;
-            }
-
-            try
-            {
-                String cmd = "EXEC SP_DOI_MATKHAU " + Program.mlogin + " ,'" + txtMatKhauHT.Text + "','" + txtMatKhauMoi.Text + "';";
-                SqlDataReader dataReader = Program.ExecSqlDataReader(cmd);
-                if (dataReader != null)
+                if (txtMatKhauMoi.Text != txtNhapLaiMK.Text)
                 {
-                    MessageBox.Show("Thay đổi mật khẩu thành công", "thông báo!", MessageBoxButtons.OK);
-                    Program.frmChinh.Visible = false;
-                    Program.frmDangNhap.Visible = true;
-                    Program.bds_dspm.RemoveFilter();
-                    Program.frmDangNhap.loadAgain();
+                    MessageBox.Show("Xác nhận mật khẩu không trùng khớp!");
+                    return;
                 }
-                else
+
+                try
                 {
-                    MessageBox.Show("không thể thay đổi mật khẩu! Hay kiểm tra mật khẩu của bạn", "Thông báo", MessageBoxButtons.OK);
+                    String strCmd = "EXEC SP_DOI_MATKHAU_SINHVIEN " + txtMa.Text + " ,'" + txtMatKhauHT.Text + "','" + txtMatKhauMoi.Text + "';";
+                    SqlDataReader dataReader = Program.ExecSqlDataReader(strCmd);
+                    if (dataReader != null)
+                    {
+                        MessageBox.Show("Thay đổi mật khẩu thành công", "thông báo!", MessageBoxButtons.OK);
+                        Program.frmChinh.Visible = false;
+                        Program.frmDangNhap.Visible = true;
+                        Program.bds_dspm.RemoveFilter();
+                        Program.frmDangNhap.loadAgain();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể thay đổi mật khẩu! Hay kiểm tra mật khẩu của bạn", "Thông báo", MessageBoxButtons.OK);
+                        txtMatKhauHT.Text = null;
+                        txtMatKhauMoi.Text = null;
+                        txtNhapLaiMK.Text = null;
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể thay đổi mật khẩu! Hay kiểm tra mật khẩu của bạn" + ex.Message, "Thông báo", MessageBoxButtons.OK);
                     txtMatKhauHT.Text = null;
                     txtMatKhauMoi.Text = null;
                     txtNhapLaiMK.Text = null;
                     return;
                 }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("không thể thay đổi mật khẩu! Hay kiểm tra mật khẩu của bạn" + ex.Message, "Thông báo", MessageBoxButtons.OK);
-                txtMatKhauHT.Text = null;
-                txtMatKhauMoi.Text = null;
-                txtNhapLaiMK.Text = null;
-                return;
+                if (txtMatKhauHT.Text != Program.password)
+                {
+                    MessageBox.Show("Mật khẩu hiện tại không đúng!");
+                    return;
+                }
+
+                if (txtMatKhauMoi.Text != txtNhapLaiMK.Text)
+                {
+                    MessageBox.Show("Xác nhận mật khẩu không trùng khớp!");
+                    return;
+                }
+
+                try
+                {
+                    String strCmd = "EXEC SP_DOI_MATKHAU " + Program.mlogin + " ,'" + txtMatKhauHT.Text + "','" + txtMatKhauMoi.Text + "';";
+
+                    SqlDataReader dataReader = Program.ExecSqlDataReader(strCmd);
+                    if (dataReader != null)
+                    {
+                        MessageBox.Show("Thay đổi mật khẩu thành công", "thông báo!", MessageBoxButtons.OK);
+                        Program.frmChinh.Visible = false;
+                        Program.frmDangNhap.Visible = true;
+                        Program.bds_dspm.RemoveFilter();
+                        Program.frmDangNhap.loadAgain();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể thay đổi mật khẩu! Hay kiểm tra mật khẩu của bạn", "Thông báo", MessageBoxButtons.OK);
+                        txtMatKhauHT.Text = null;
+                        txtMatKhauMoi.Text = null;
+                        txtNhapLaiMK.Text = null;
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Không thể thay đổi mật khẩu! Hay kiểm tra mật khẩu của bạn" + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                    txtMatKhauHT.Text = null;
+                    txtMatKhauMoi.Text = null;
+                    txtNhapLaiMK.Text = null;
+                    return;
+                }
             }
         }
 

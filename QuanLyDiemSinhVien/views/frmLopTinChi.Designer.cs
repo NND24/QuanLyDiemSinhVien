@@ -75,6 +75,14 @@
             this.cmbMonHoc = new System.Windows.Forms.ComboBox();
             this.cmbGiangVien = new System.Windows.Forms.ComboBox();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.ceHuyLop = new DevExpress.XtraEditors.CheckEdit();
+            this.txtMaGiangVien = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaMonHoc = new DevExpress.XtraEditors.TextEdit();
+            this.seNhom = new DevExpress.XtraEditors.SpinEdit();
+            this.txtNienKhoa = new DevExpress.XtraEditors.TextEdit();
+            this.seSoSVToiThieu = new DevExpress.XtraEditors.SpinEdit();
+            this.seHocKy = new DevExpress.XtraEditors.SpinEdit();
+            this.txtMaKhoa = new DevExpress.XtraEditors.TextEdit();
             this.qLDSVHTCDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LOPTINCHITableAdapter = new QuanLyDiemSinhVien.QLDSV_HTCDataSetTableAdapters.LOPTINCHITableAdapter();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
@@ -82,14 +90,6 @@
             this.tableAdapterManager = new QuanLyDiemSinhVien.QLDSV_HTCDataSetTableAdapters.TableAdapterManager();
             this.DANGKYTableAdapter = new QuanLyDiemSinhVien.QLDSV_HTCDataSetTableAdapters.DANGKYTableAdapter();
             this.bdsDK = new System.Windows.Forms.BindingSource(this.components);
-            this.txtMaKhoa = new DevExpress.XtraEditors.TextEdit();
-            this.seHocKy = new DevExpress.XtraEditors.SpinEdit();
-            this.seSoSVToiThieu = new DevExpress.XtraEditors.SpinEdit();
-            this.txtNienKhoa = new DevExpress.XtraEditors.TextEdit();
-            this.seNhom = new DevExpress.XtraEditors.SpinEdit();
-            this.txtMaMonHoc = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaGiangVien = new DevExpress.XtraEditors.TextEdit();
-            this.ceHuyLop = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewLop)).BeginInit();
@@ -98,16 +98,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.QLDSV_HTCDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ceHuyLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaGiangVien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaMonHoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seNhom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seSoSVToiThieu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seHocKy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVHTCDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seHocKy.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seSoSVToiThieu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seNhom.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaMonHoc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaGiangVien.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceHuyLop.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -258,14 +258,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1186, 57);
+            this.panel1.Size = new System.Drawing.Size(1186, 39);
             this.panel1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(420, 19);
+            this.label1.Location = new System.Drawing.Point(420, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 19);
             this.label1.TabIndex = 1;
@@ -276,7 +276,7 @@
             this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKhoa.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(496, 15);
+            this.cmbKhoa.Location = new System.Drawing.Point(496, 6);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(369, 27);
             this.cmbKhoa.TabIndex = 0;
@@ -380,11 +380,11 @@
             // 
             this.gcLopTinChi.DataSource = this.bdsLTC;
             this.gcLopTinChi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcLopTinChi.Location = new System.Drawing.Point(0, 97);
+            this.gcLopTinChi.Location = new System.Drawing.Point(0, 79);
             this.gcLopTinChi.MainView = this.gridViewLop;
             this.gcLopTinChi.MenuManager = this.barManager1;
             this.gcLopTinChi.Name = "gcLopTinChi";
-            this.gcLopTinChi.Size = new System.Drawing.Size(1186, 200);
+            this.gcLopTinChi.Size = new System.Drawing.Size(1186, 170);
             this.gcLopTinChi.TabIndex = 5;
             this.gcLopTinChi.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewLop});
@@ -403,7 +403,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(492, 13);
+            this.label2.Location = new System.Drawing.Point(492, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(234, 22);
             this.label2.TabIndex = 0;
@@ -413,7 +413,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(146, 63);
+            this.label3.Location = new System.Drawing.Point(145, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 20);
             this.label3.TabIndex = 1;
@@ -423,7 +423,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(146, 106);
+            this.label4.Location = new System.Drawing.Point(145, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 2;
@@ -433,7 +433,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(146, 149);
+            this.label5.Location = new System.Drawing.Point(145, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 3;
@@ -443,7 +443,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(146, 192);
+            this.label6.Location = new System.Drawing.Point(145, 174);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 20);
             this.label6.TabIndex = 4;
@@ -453,7 +453,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(146, 231);
+            this.label7.Location = new System.Drawing.Point(145, 213);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 20);
             this.label7.TabIndex = 9;
@@ -463,7 +463,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(610, 63);
+            this.label12.Location = new System.Drawing.Point(609, 45);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 20);
             this.label12.TabIndex = 10;
@@ -473,7 +473,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(610, 106);
+            this.label11.Location = new System.Drawing.Point(609, 88);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 20);
             this.label11.TabIndex = 11;
@@ -483,7 +483,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(610, 149);
+            this.label10.Location = new System.Drawing.Point(609, 131);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(90, 20);
             this.label10.TabIndex = 12;
@@ -493,7 +493,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(610, 192);
+            this.label9.Location = new System.Drawing.Point(609, 174);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 20);
             this.label9.TabIndex = 13;
@@ -503,7 +503,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(610, 231);
+            this.label8.Location = new System.Drawing.Point(609, 213);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 20);
             this.label8.TabIndex = 14;
@@ -513,7 +513,7 @@
             // 
             this.cmbMonHoc.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmbMonHoc.FormattingEnabled = true;
-            this.cmbMonHoc.Location = new System.Drawing.Point(264, 151);
+            this.cmbMonHoc.Location = new System.Drawing.Point(263, 133);
             this.cmbMonHoc.Name = "cmbMonHoc";
             this.cmbMonHoc.Size = new System.Drawing.Size(271, 27);
             this.cmbMonHoc.TabIndex = 16;
@@ -523,7 +523,7 @@
             // 
             this.cmbGiangVien.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmbGiangVien.FormattingEnabled = true;
-            this.cmbGiangVien.Location = new System.Drawing.Point(264, 191);
+            this.cmbGiangVien.Location = new System.Drawing.Point(263, 173);
             this.cmbGiangVien.Name = "cmbGiangVien";
             this.cmbGiangVien.Size = new System.Drawing.Size(271, 27);
             this.cmbGiangVien.TabIndex = 17;
@@ -554,10 +554,120 @@
             this.panelControl1.Controls.Add(this.label3);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 297);
+            this.panelControl1.Location = new System.Drawing.Point(0, 249);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1186, 278);
+            this.panelControl1.Size = new System.Drawing.Size(1186, 326);
             this.panelControl1.TabIndex = 6;
+            // 
+            // ceHuyLop
+            // 
+            this.ceHuyLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "HUYLOP", true));
+            this.ceHuyLop.Location = new System.Drawing.Point(725, 215);
+            this.ceHuyLop.MenuManager = this.barManager1;
+            this.ceHuyLop.Name = "ceHuyLop";
+            this.ceHuyLop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ceHuyLop.Properties.Appearance.Options.UseFont = true;
+            this.ceHuyLop.Properties.Caption = "";
+            this.ceHuyLop.Size = new System.Drawing.Size(75, 20);
+            this.ceHuyLop.TabIndex = 40;
+            // 
+            // txtMaGiangVien
+            // 
+            this.txtMaGiangVien.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "MAGV", true));
+            this.txtMaGiangVien.Location = new System.Drawing.Point(725, 180);
+            this.txtMaGiangVien.MenuManager = this.barManager1;
+            this.txtMaGiangVien.Name = "txtMaGiangVien";
+            this.txtMaGiangVien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaGiangVien.Properties.Appearance.Options.UseFont = true;
+            this.txtMaGiangVien.Size = new System.Drawing.Size(271, 26);
+            this.txtMaGiangVien.TabIndex = 39;
+            // 
+            // txtMaMonHoc
+            // 
+            this.txtMaMonHoc.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "MAMH", true));
+            this.txtMaMonHoc.Location = new System.Drawing.Point(725, 138);
+            this.txtMaMonHoc.MenuManager = this.barManager1;
+            this.txtMaMonHoc.Name = "txtMaMonHoc";
+            this.txtMaMonHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMonHoc.Properties.Appearance.Options.UseFont = true;
+            this.txtMaMonHoc.Size = new System.Drawing.Size(271, 26);
+            this.txtMaMonHoc.TabIndex = 38;
+            // 
+            // seNhom
+            // 
+            this.seNhom.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "NHOM", true));
+            this.seNhom.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seNhom.Location = new System.Drawing.Point(725, 90);
+            this.seNhom.MenuManager = this.barManager1;
+            this.seNhom.Name = "seNhom";
+            this.seNhom.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seNhom.Properties.Appearance.Options.UseFont = true;
+            this.seNhom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seNhom.Size = new System.Drawing.Size(271, 26);
+            this.seNhom.TabIndex = 37;
+            // 
+            // txtNienKhoa
+            // 
+            this.txtNienKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "NIENKHOA", true));
+            this.txtNienKhoa.Location = new System.Drawing.Point(725, 48);
+            this.txtNienKhoa.MenuManager = this.barManager1;
+            this.txtNienKhoa.Name = "txtNienKhoa";
+            this.txtNienKhoa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNienKhoa.Properties.Appearance.Options.UseFont = true;
+            this.txtNienKhoa.Size = new System.Drawing.Size(271, 26);
+            this.txtNienKhoa.TabIndex = 36;
+            // 
+            // seSoSVToiThieu
+            // 
+            this.seSoSVToiThieu.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "SOSVTOITHIEU", true));
+            this.seSoSVToiThieu.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seSoSVToiThieu.Location = new System.Drawing.Point(263, 215);
+            this.seSoSVToiThieu.MenuManager = this.barManager1;
+            this.seSoSVToiThieu.Name = "seSoSVToiThieu";
+            this.seSoSVToiThieu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seSoSVToiThieu.Properties.Appearance.Options.UseFont = true;
+            this.seSoSVToiThieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seSoSVToiThieu.Size = new System.Drawing.Size(271, 26);
+            this.seSoSVToiThieu.TabIndex = 35;
+            // 
+            // seHocKy
+            // 
+            this.seHocKy.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "HOCKY", true));
+            this.seHocKy.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.seHocKy.Location = new System.Drawing.Point(263, 94);
+            this.seHocKy.MenuManager = this.barManager1;
+            this.seHocKy.Name = "seHocKy";
+            this.seHocKy.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seHocKy.Properties.Appearance.Options.UseFont = true;
+            this.seHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seHocKy.Size = new System.Drawing.Size(271, 26);
+            this.seHocKy.TabIndex = 34;
+            // 
+            // txtMaKhoa
+            // 
+            this.txtMaKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "MAKHOA", true));
+            this.txtMaKhoa.Location = new System.Drawing.Point(263, 48);
+            this.txtMaKhoa.MenuManager = this.barManager1;
+            this.txtMaKhoa.Name = "txtMaKhoa";
+            this.txtMaKhoa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKhoa.Properties.Appearance.Options.UseFont = true;
+            this.txtMaKhoa.Size = new System.Drawing.Size(271, 26);
+            this.txtMaKhoa.TabIndex = 33;
             // 
             // qLDSVHTCDataSetBindingSource
             // 
@@ -607,116 +717,6 @@
             this.bdsDK.DataMember = "FK_DangKy_LopTinChi";
             this.bdsDK.DataSource = this.bdsLTC;
             // 
-            // txtMaKhoa
-            // 
-            this.txtMaKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "MAKHOA", true));
-            this.txtMaKhoa.Location = new System.Drawing.Point(264, 66);
-            this.txtMaKhoa.MenuManager = this.barManager1;
-            this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhoa.Properties.Appearance.Options.UseFont = true;
-            this.txtMaKhoa.Size = new System.Drawing.Size(271, 26);
-            this.txtMaKhoa.TabIndex = 33;
-            // 
-            // seHocKy
-            // 
-            this.seHocKy.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "HOCKY", true));
-            this.seHocKy.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.seHocKy.Location = new System.Drawing.Point(264, 112);
-            this.seHocKy.MenuManager = this.barManager1;
-            this.seHocKy.Name = "seHocKy";
-            this.seHocKy.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seHocKy.Properties.Appearance.Options.UseFont = true;
-            this.seHocKy.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.seHocKy.Size = new System.Drawing.Size(271, 26);
-            this.seHocKy.TabIndex = 34;
-            // 
-            // seSoSVToiThieu
-            // 
-            this.seSoSVToiThieu.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "SOSVTOITHIEU", true));
-            this.seSoSVToiThieu.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.seSoSVToiThieu.Location = new System.Drawing.Point(264, 233);
-            this.seSoSVToiThieu.MenuManager = this.barManager1;
-            this.seSoSVToiThieu.Name = "seSoSVToiThieu";
-            this.seSoSVToiThieu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seSoSVToiThieu.Properties.Appearance.Options.UseFont = true;
-            this.seSoSVToiThieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.seSoSVToiThieu.Size = new System.Drawing.Size(271, 26);
-            this.seSoSVToiThieu.TabIndex = 35;
-            // 
-            // txtNienKhoa
-            // 
-            this.txtNienKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "NIENKHOA", true));
-            this.txtNienKhoa.Location = new System.Drawing.Point(726, 66);
-            this.txtNienKhoa.MenuManager = this.barManager1;
-            this.txtNienKhoa.Name = "txtNienKhoa";
-            this.txtNienKhoa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNienKhoa.Properties.Appearance.Options.UseFont = true;
-            this.txtNienKhoa.Size = new System.Drawing.Size(271, 26);
-            this.txtNienKhoa.TabIndex = 36;
-            // 
-            // seNhom
-            // 
-            this.seNhom.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "NHOM", true));
-            this.seNhom.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.seNhom.Location = new System.Drawing.Point(726, 108);
-            this.seNhom.MenuManager = this.barManager1;
-            this.seNhom.Name = "seNhom";
-            this.seNhom.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seNhom.Properties.Appearance.Options.UseFont = true;
-            this.seNhom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.seNhom.Size = new System.Drawing.Size(271, 26);
-            this.seNhom.TabIndex = 37;
-            // 
-            // txtMaMonHoc
-            // 
-            this.txtMaMonHoc.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "MAMH", true));
-            this.txtMaMonHoc.Location = new System.Drawing.Point(726, 156);
-            this.txtMaMonHoc.MenuManager = this.barManager1;
-            this.txtMaMonHoc.Name = "txtMaMonHoc";
-            this.txtMaMonHoc.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMonHoc.Properties.Appearance.Options.UseFont = true;
-            this.txtMaMonHoc.Size = new System.Drawing.Size(271, 26);
-            this.txtMaMonHoc.TabIndex = 38;
-            // 
-            // txtMaGiangVien
-            // 
-            this.txtMaGiangVien.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "MAGV", true));
-            this.txtMaGiangVien.Location = new System.Drawing.Point(726, 198);
-            this.txtMaGiangVien.MenuManager = this.barManager1;
-            this.txtMaGiangVien.Name = "txtMaGiangVien";
-            this.txtMaGiangVien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaGiangVien.Properties.Appearance.Options.UseFont = true;
-            this.txtMaGiangVien.Size = new System.Drawing.Size(271, 26);
-            this.txtMaGiangVien.TabIndex = 39;
-            // 
-            // ceHuyLop
-            // 
-            this.ceHuyLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "HUYLOP", true));
-            this.ceHuyLop.Location = new System.Drawing.Point(726, 233);
-            this.ceHuyLop.MenuManager = this.barManager1;
-            this.ceHuyLop.Name = "ceHuyLop";
-            this.ceHuyLop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ceHuyLop.Properties.Appearance.Options.UseFont = true;
-            this.ceHuyLop.Properties.Caption = "";
-            this.ceHuyLop.Size = new System.Drawing.Size(75, 20);
-            this.ceHuyLop.TabIndex = 40;
-            // 
             // frmLopTinChi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -742,16 +742,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ceHuyLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaGiangVien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaMonHoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seNhom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seSoSVToiThieu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seHocKy.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLDSVHTCDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seHocKy.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seSoSVToiThieu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seNhom.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaMonHoc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaGiangVien.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceHuyLop.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
