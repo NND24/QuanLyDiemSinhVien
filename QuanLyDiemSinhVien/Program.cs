@@ -9,7 +9,7 @@ namespace QuanLyDiemSinhVien
     {
         public static SqlConnection conn = new SqlConnection();
         public static string connstr;
-        public static string constr_publisher = "Data Source=DESKTOP-UHICCE5;Initial Catalog=QLDSV_HTC;User ID=sa;Password='123456789';";
+        public static string constr_publisher = "Data Source=DESKTOP-5PRNF3O\\SERVER;Initial Catalog=QLDSV_TC;User ID=sa;Password='123456';";
 
         public static SqlDataReader myReader;
         public static String servername = "";
@@ -18,9 +18,9 @@ namespace QuanLyDiemSinhVien
         public static String password = "";
         public static String passSV = "";
 
-        public static String database = "QLDSV_HTC";
+        public static String database = "QLDSV_TC";
         public static String remoteLogin = "HTKN";
-        public static String remotePass = "123456789";
+        public static String remotePass = "123456";
 
         public static String mloginDN = "";
         public static String passDN = "";

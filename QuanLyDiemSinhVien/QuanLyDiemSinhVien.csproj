@@ -98,11 +98,23 @@
     <Compile Include="reports\ReportBangDiemMonHoc.Designer.cs">
       <DependentUpon>ReportBangDiemMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="reports\ReportBangDiemTongKet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\ReportBangDiemTongKet.Designer.cs">
+      <DependentUpon>ReportBangDiemTongKet.cs</DependentUpon>
+    </Compile>
     <Compile Include="reports\ReportDSLopTinChi.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="reports\ReportDSLopTinChi.Designer.cs">
       <DependentUpon>ReportDSLopTinChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\ReportDSSVDangKyLTC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\ReportDSSVDangKyLTC.Designer.cs">
+      <DependentUpon>ReportDSSVDangKyLTC.cs</DependentUpon>
     </Compile>
     <Compile Include="reports\ReportHocPhi.cs">
       <SubType>Component</SubType>
@@ -231,8 +243,14 @@
     <EmbeddedResource Include="reports\ReportBangDiemMonHoc.resx">
       <DependentUpon>ReportBangDiemMonHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reports\ReportBangDiemTongKet.resx">
+      <DependentUpon>ReportBangDiemTongKet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reports\ReportDSLopTinChi.resx">
       <DependentUpon>ReportDSLopTinChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ReportDSSVDangKyLTC.resx">
+      <DependentUpon>ReportDSSVDangKyLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reports\ReportHocPhi.resx">
       <DependentUpon>ReportHocPhi.cs</DependentUpon>
