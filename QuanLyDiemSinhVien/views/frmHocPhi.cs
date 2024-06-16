@@ -107,7 +107,7 @@ namespace QuanLyDiemSinhVien.views
 
         private void gridViewLop_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            loadDataHocPhiSV();
+            loadCTDongHocPhi();
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
