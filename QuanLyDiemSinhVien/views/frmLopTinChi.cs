@@ -82,9 +82,13 @@ namespace QuanLyDiemSinhVien.views
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             vitri = bdsLTC.Position;
-            panelControl1.Enabled = true;
+            panelLTC.Enabled = true;
+            ceHuyLop.Checked = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = true;
             bdsLTC.AddNew();
             txtMaKhoa.Text = maKhoa;
+            cmbMonHoc_SelectedIndexChanged(sender, e);
+            cmbGiangVien_SelectedIndexChanged(sender, e);
             try
             {
                 DataTable dt = Program.ExecSqlDataTable("EXEC SP_LAY_MAKHOA");
@@ -98,14 +102,13 @@ namespace QuanLyDiemSinhVien.views
                 MessageBox.Show("Lỗi kết nối server!");
                 return;
             }
-            btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnPhucHoi.Enabled = false;
-            btnGhi.Enabled = btnThoat.Enabled = true;
+            btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = false;
+            btnGhi.Enabled = btnPhucHoi.Enabled = btnThoat.Enabled = true;
             gcLopTinChi.Enabled = false;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Int32 maltc = 0;
             if (bdsDK.Count > 0)
             {
                 MessageBox.Show("Không thể xóa lớp tín chỉ này do đã có sinh viên đăng ký", "",
@@ -117,7 +120,6 @@ namespace QuanLyDiemSinhVien.views
             {
                 try
                 {
-                    maltc = int.Parse(((DataRowView)bdsLTC[bdsLTC.Position])["MALTC"].ToString());
                     bdsLTC.RemoveCurrent();
                     this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
                     this.LOPTINCHITableAdapter.Update(this.QLDSV_HTCDataSet);
@@ -126,26 +128,7 @@ namespace QuanLyDiemSinhVien.views
                         MessageBox.Show("Không thể xóa lớp tín chỉ này do đã có sinh viên đăng ký", "",
                                     MessageBoxButtons.OK);
                         return;
-                    }
-                    if (MessageBox.Show("Bạn có thật sự muốn xóa lớp tín chỉ này không? ", "Xác nhận",
-                            MessageBoxButtons.OKCancel) == DialogResult.OK)
-                    {
-                        try
-                        {
-                            maltc = int.Parse(((DataRowView)bdsLTC[bdsLTC.Position])["MALTC"].ToString());
-                            bdsLTC.RemoveCurrent();
-                            this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
-                            this.LOPTINCHITableAdapter.Update(this.QLDSV_HTCDataSet);
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Lỗi xóa lớp tín chỉ. Bạn hãy xóa lại\n" + ex.Message, "",
-                                        MessageBoxButtons.OK);
-                            this.LOPTINCHITableAdapter.Fill(this.QLDSV_HTCDataSet.LOPTINCHI);
-                            bdsLTC.Position = bdsLTC.Find("MALTC", maltc);
-                            return;
-                        }
-                    }
+                    }  
                     if (bdsLTC.Count == 0) btnXoa.Enabled = false; ;
                 }
                 catch (Exception ex)
@@ -153,7 +136,6 @@ namespace QuanLyDiemSinhVien.views
                     MessageBox.Show("Lỗi xóa lớp tín chỉ. Bạn hãy xóa lại\n" + ex.Message, "",
                                 MessageBoxButtons.OK);
                     this.LOPTINCHITableAdapter.Fill(this.QLDSV_HTCDataSet.LOPTINCHI);
-                    bdsLTC.Position = bdsLTC.Find("MALTC", maltc);
                     return;
                 }
             }
@@ -163,7 +145,7 @@ namespace QuanLyDiemSinhVien.views
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             vitri = bdsLTC.Position;
-            panelControl1.Enabled = true;
+            panelLTC.Enabled = true;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = btnThoat.Enabled = true;
             gcLopTinChi.Enabled = false;
@@ -174,7 +156,7 @@ namespace QuanLyDiemSinhVien.views
             bdsLTC.CancelEdit();
             if (btnThem.Enabled == false) bdsLTC.Position = vitri;
             gcLopTinChi.Enabled = true;
-            panelControl1.Enabled = false;
+            panelLTC.Enabled = false;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnThoat.Enabled = true;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
         }
@@ -236,7 +218,7 @@ namespace QuanLyDiemSinhVien.views
 
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnThoat.Enabled = cmbKhoa.Enabled = true;
             btnGhi.Enabled = false;
-            panelControl1.Enabled = false;
+            panelLTC.Enabled = false;
             cmbKhoa.Enabled = true;
         }
 
@@ -314,6 +296,18 @@ namespace QuanLyDiemSinhVien.views
                 this.DANGKYTableAdapter.Fill(this.QLDSV_HTCDataSet.DANGKY);
                 maKhoa = ((DataRowView)bdsLTC[0])["MAKHOA"].ToString();
             }
+        }
+
+        private void txtMaMonHoc_EditValueChanged(object sender, EventArgs e)
+        {
+            String maMonHoc = txtMaMonHoc.Text;
+            cmbMonHoc.SelectedValue = maMonHoc;
+        }
+
+        private void txtMaGiangVien_EditValueChanged(object sender, EventArgs e)
+        {
+            String maGiangVien = txtMaGiangVien.Text;
+            cmbGiangVien.SelectedValue = maGiangVien;
         }
     }
 }
