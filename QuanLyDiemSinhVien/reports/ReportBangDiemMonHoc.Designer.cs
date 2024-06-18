@@ -240,7 +240,7 @@
             // 
             // lblKhoa
             // 
-            this.lblKhoa.LocationFloat = new DevExpress.Utils.PointFloat(287.9804F, 45.83333F);
+            this.lblKhoa.LocationFloat = new DevExpress.Utils.PointFloat(252.772F, 45.83337F);
             this.lblKhoa.Multiline = true;
             this.lblKhoa.Name = "lblKhoa";
             this.lblKhoa.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -251,7 +251,7 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(237.9804F, 45.83333F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(202.772F, 45.83337F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);

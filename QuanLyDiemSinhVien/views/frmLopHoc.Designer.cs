@@ -119,7 +119,7 @@
             // 
             mALOPLabel.AutoSize = true;
             mALOPLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mALOPLabel.Location = new System.Drawing.Point(95, 100);
+            mALOPLabel.Location = new System.Drawing.Point(140, 116);
             mALOPLabel.Name = "mALOPLabel";
             mALOPLabel.Size = new System.Drawing.Size(56, 17);
             mALOPLabel.TabIndex = 17;
@@ -129,7 +129,7 @@
             // 
             tENLOPLabel.AutoSize = true;
             tENLOPLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tENLOPLabel.Location = new System.Drawing.Point(95, 143);
+            tENLOPLabel.Location = new System.Drawing.Point(140, 159);
             tENLOPLabel.Name = "tENLOPLabel";
             tENLOPLabel.Size = new System.Drawing.Size(58, 17);
             tENLOPLabel.TabIndex = 18;
@@ -139,7 +139,7 @@
             // 
             mAKHOALabel.AutoSize = true;
             mAKHOALabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            mAKHOALabel.Location = new System.Drawing.Point(95, 55);
+            mAKHOALabel.Location = new System.Drawing.Point(140, 71);
             mAKHOALabel.Name = "mAKHOALabel";
             mAKHOALabel.Size = new System.Drawing.Size(42, 17);
             mAKHOALabel.TabIndex = 19;
@@ -149,7 +149,7 @@
             // 
             kHOAHOCLabel.AutoSize = true;
             kHOAHOCLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            kHOAHOCLabel.Location = new System.Drawing.Point(95, 183);
+            kHOAHOCLabel.Location = new System.Drawing.Point(140, 199);
             kHOAHOCLabel.Name = "kHOAHOCLabel";
             kHOAHOCLabel.Size = new System.Drawing.Size(70, 17);
             kHOAHOCLabel.TabIndex = 20;
@@ -172,7 +172,7 @@
             this.btnGhi,
             this.btnThoat});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 13;
+            this.barManager1.MaxItemId = 14;
             // 
             // bar2
             // 
@@ -367,7 +367,7 @@
             // 
             this.panelSinhVien.Controls.Add(this.panel1);
             this.panelSinhVien.Controls.Add(this.gridControlSV);
-            this.panelSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSinhVien.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelSinhVien.Enabled = false;
             this.panelSinhVien.Location = new System.Drawing.Point(630, 2);
             this.panelSinhVien.Name = "panelSinhVien";
@@ -391,6 +391,7 @@
             // 
             this.btnGhiSV.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGhiSV.Appearance.Options.UseFont = true;
+            this.btnGhiSV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGhiSV.Enabled = false;
             this.btnGhiSV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGhiSV.ImageOptions.Image")));
             this.btnGhiSV.Location = new System.Drawing.Point(503, 10);
@@ -404,6 +405,7 @@
             // 
             this.btnPhucHoiSV.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhucHoiSV.Appearance.Options.UseFont = true;
+            this.btnPhucHoiSV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPhucHoiSV.Enabled = false;
             this.btnPhucHoiSV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhucHoiSV.ImageOptions.Image")));
             this.btnPhucHoiSV.Location = new System.Drawing.Point(368, 10);
@@ -417,7 +419,7 @@
             // 
             this.btnSuaSV.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaSV.Appearance.Options.UseFont = true;
-            this.btnSuaSV.Enabled = false;
+            this.btnSuaSV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuaSV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaSV.ImageOptions.Image")));
             this.btnSuaSV.Location = new System.Drawing.Point(253, 10);
             this.btnSuaSV.Name = "btnSuaSV";
@@ -430,7 +432,7 @@
             // 
             this.btnXoaSV.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaSV.Appearance.Options.UseFont = true;
-            this.btnXoaSV.Enabled = false;
+            this.btnXoaSV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoaSV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaSV.ImageOptions.Image")));
             this.btnXoaSV.Location = new System.Drawing.Point(138, 10);
             this.btnXoaSV.Name = "btnXoaSV";
@@ -443,6 +445,7 @@
             // 
             this.btnThemSV.Appearance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemSV.Appearance.Options.UseFont = true;
+            this.btnThemSV.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemSV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSV.ImageOptions.Image")));
             this.btnThemSV.Location = new System.Drawing.Point(23, 10);
             this.btnThemSV.Name = "btnThemSV";
@@ -574,7 +577,7 @@
             // txtKhoaHoc
             // 
             this.txtKhoaHoc.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "KHOAHOC", true));
-            this.txtKhoaHoc.Location = new System.Drawing.Point(173, 180);
+            this.txtKhoaHoc.Location = new System.Drawing.Point(218, 196);
             this.txtKhoaHoc.MenuManager = this.barManager1;
             this.txtKhoaHoc.Name = "txtKhoaHoc";
             this.txtKhoaHoc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -586,7 +589,7 @@
             // 
             this.txtKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "MAKHOA", true));
             this.txtKhoa.Enabled = false;
-            this.txtKhoa.Location = new System.Drawing.Point(173, 52);
+            this.txtKhoa.Location = new System.Drawing.Point(218, 68);
             this.txtKhoa.MenuManager = this.barManager1;
             this.txtKhoa.Name = "txtKhoa";
             this.txtKhoa.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -597,7 +600,7 @@
             // txtTenLop
             // 
             this.txtTenLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "TENLOP", true));
-            this.txtTenLop.Location = new System.Drawing.Point(173, 140);
+            this.txtTenLop.Location = new System.Drawing.Point(218, 156);
             this.txtTenLop.MenuManager = this.barManager1;
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -608,7 +611,7 @@
             // txtMaLop
             // 
             this.txtMaLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLop, "MALOP", true));
-            this.txtMaLop.Location = new System.Drawing.Point(173, 97);
+            this.txtMaLop.Location = new System.Drawing.Point(218, 113);
             this.txtMaLop.MenuManager = this.barManager1;
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

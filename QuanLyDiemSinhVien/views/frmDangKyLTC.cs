@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVien.views
@@ -13,6 +14,7 @@ namespace QuanLyDiemSinhVien.views
         {
             InitializeComponent();
             layThongTinSinhVien();
+            gvLopTinChi.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(gvLopTinChi_RowClick);
         }
 
         private void layThongTinSinhVien()
@@ -76,7 +78,7 @@ namespace QuanLyDiemSinhVien.views
             this.bdsLopDaDangKy.DataSource = tableLopTCDaDKy;
             this.gcLopDaDK.DataSource = this.bdsLopDaDangKy;
 
-            panelDangKy.Enabled = false;
+            txtMaLopTinChi.Enabled = txtMonHoc.Enabled = txtGiangVien.Enabled = false;
             this.btnDangKy.BackColor = System.Drawing.Color.LightGray;
             this.btnHuyDK.BackColor = System.Drawing.Color.LightGray;
             txtMaLopTinChi.Text = null;
@@ -91,32 +93,47 @@ namespace QuanLyDiemSinhVien.views
 
         private void gvLopTinChi_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            if (bdsLopTinchi.Count > 0)
+            try
             {
-                txtMaLopTinChi.Text = ((DataRowView)bdsLopTinchi[bdsLopTinchi.Position])["MALTC"].ToString();
-                txtMonHoc.Text = ((DataRowView)bdsLopTinchi[bdsLopTinchi.Position])["TENMH"].ToString();
-                txtGiangVien.Text = ((DataRowView)bdsLopTinchi[bdsLopTinchi.Position])["GIANGVIEN"].ToString();
+                if (bdsLopTinchi.Count > 0)
+                {
+                    txtMaLopTinChi.Text = ((DataRowView)bdsLopTinchi[bdsLopTinchi.Position])["MALTC"].ToString();
+                    txtMonHoc.Text = ((DataRowView)bdsLopTinchi[bdsLopTinchi.Position])["TENMH"].ToString();
+                    txtGiangVien.Text = ((DataRowView)bdsLopTinchi[bdsLopTinchi.Position])["GIANGVIEN"].ToString();
+                }
+                txtMaLopTinChi.Enabled = txtMonHoc.Enabled = txtGiangVien.Enabled = true;
+                btnDangKy.Enabled = true;
+                btnHuyDK.Enabled = false;
+                this.btnDangKy.BackColor = System.Drawing.Color.LightBlue;
+                this.btnHuyDK.BackColor = System.Drawing.Color.LightGray;
             }
-            panelDangKy.Enabled = true;
-            btnDangKy.Enabled = true;
-            btnHuyDK.Enabled = false;
-            this.btnDangKy.BackColor = System.Drawing.Color.LightBlue;
-            this.btnHuyDK.BackColor = System.Drawing.Color.LightGray;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
+
 
         private void gvLopDaDK_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            if (bdsLopDaDangKy.Count > 0)
+            try
             {
-                txtMaLopTinChi.Text = ((DataRowView)bdsLopDaDangKy[bdsLopDaDangKy.Position])["MALTC"].ToString();
-                txtMonHoc.Text = ((DataRowView)bdsLopDaDangKy[bdsLopDaDangKy.Position])["TENMH"].ToString();
-                txtGiangVien.Text = ((DataRowView)bdsLopDaDangKy[bdsLopDaDangKy.Position])["GIANGVIEN"].ToString();
+                if (bdsLopDaDangKy.Count > 0)
+                {
+                    txtMaLopTinChi.Text = ((DataRowView)bdsLopDaDangKy[bdsLopDaDangKy.Position])["MALTC"].ToString();
+                    txtMonHoc.Text = ((DataRowView)bdsLopDaDangKy[bdsLopDaDangKy.Position])["TENMH"].ToString();
+                    txtGiangVien.Text = ((DataRowView)bdsLopDaDangKy[bdsLopDaDangKy.Position])["GIANGVIEN"].ToString();
+                }
+                txtMaLopTinChi.Enabled = txtMonHoc.Enabled = txtGiangVien.Enabled = true;
+                btnDangKy.Enabled = false;
+                btnHuyDK.Enabled = true;
+                this.btnDangKy.BackColor = System.Drawing.Color.LightGray;
+                this.btnHuyDK.BackColor = System.Drawing.Color.LightBlue;
             }
-            panelDangKy.Enabled = true;
-            btnDangKy.Enabled = false;
-            btnHuyDK.Enabled = true;
-            this.btnDangKy.BackColor = System.Drawing.Color.LightGray;
-            this.btnHuyDK.BackColor = System.Drawing.Color.LightBlue;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnDangKy_Click(object sender, System.EventArgs e)
@@ -152,7 +169,6 @@ namespace QuanLyDiemSinhVien.views
                 }
             }
         }
-
 
     }
 }

@@ -64,7 +64,7 @@ namespace QuanLyDiemSinhVien.views
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
             if (KetNoi_CSDLGoc() == 0) return;
-            LayDSPM("SELECT * FROM V_DS_PHANMANH");
+            LayDSPM("SELECT * FROM Get_Subscribes");
             cmbKhoa.SelectedIndex = 0;
             Program.servername = cmbKhoa.SelectedValue.ToString();
         }

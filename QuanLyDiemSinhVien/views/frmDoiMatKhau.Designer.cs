@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtChucVu = new DevExpress.XtraEditors.TextEdit();
-            this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
             this.txtMa = new DevExpress.XtraEditors.TextEdit();
+            this.txtHoTen = new DevExpress.XtraEditors.TextEdit();
+            this.txtChucVu = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.txtMatKhauMoi = new DevExpress.XtraEditors.TextEdit();
             this.txtNhapLaiMK = new DevExpress.XtraEditors.TextEdit();
             this.txtMatKhauHT = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.chkHienMatKhau = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChucVu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChucVu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauMoi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhapLaiMK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauHT.Properties)).BeginInit();
@@ -70,85 +71,18 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(605, 557);
+            this.panelControl1.Size = new System.Drawing.Size(645, 557);
             this.panelControl1.TabIndex = 0;
             // 
-            // panelControl2
+            // txtMa
             // 
-            this.panelControl2.Controls.Add(this.btnHuy);
-            this.panelControl2.Controls.Add(this.btnLuu);
-            this.panelControl2.Controls.Add(this.txtMatKhauMoi);
-            this.panelControl2.Controls.Add(this.txtNhapLaiMK);
-            this.panelControl2.Controls.Add(this.txtMatKhauHT);
-            this.panelControl2.Controls.Add(this.label6);
-            this.panelControl2.Controls.Add(this.label7);
-            this.panelControl2.Controls.Add(this.label8);
-            this.panelControl2.Controls.Add(this.label2);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(605, 0);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(581, 557);
-            this.panelControl2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(185, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "THÔNG TIN CÁ NHÂN";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(219, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ĐỔI MẬT KHẨU";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 19);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Chức vụ:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(116, 186);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 19);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Mã:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(116, 237);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 19);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Họ tên:";
-            // 
-            // txtChucVu
-            // 
-            this.txtChucVu.Enabled = false;
-            this.txtChucVu.Location = new System.Drawing.Point(189, 133);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChucVu.Properties.Appearance.Options.UseFont = true;
-            this.txtChucVu.Size = new System.Drawing.Size(250, 26);
-            this.txtChucVu.TabIndex = 4;
+            this.txtMa.Enabled = false;
+            this.txtMa.Location = new System.Drawing.Point(189, 183);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMa.Properties.Appearance.Options.UseFont = true;
+            this.txtMa.Size = new System.Drawing.Size(250, 26);
+            this.txtMa.TabIndex = 6;
             // 
             // txtHoTen
             // 
@@ -160,15 +94,99 @@
             this.txtHoTen.Size = new System.Drawing.Size(250, 26);
             this.txtHoTen.TabIndex = 5;
             // 
-            // txtMa
+            // txtChucVu
             // 
-            this.txtMa.Enabled = false;
-            this.txtMa.Location = new System.Drawing.Point(189, 183);
-            this.txtMa.Name = "txtMa";
-            this.txtMa.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMa.Properties.Appearance.Options.UseFont = true;
-            this.txtMa.Size = new System.Drawing.Size(250, 26);
-            this.txtMa.TabIndex = 6;
+            this.txtChucVu.Enabled = false;
+            this.txtChucVu.Location = new System.Drawing.Point(189, 133);
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChucVu.Properties.Appearance.Options.UseFont = true;
+            this.txtChucVu.Size = new System.Drawing.Size(250, 26);
+            this.txtChucVu.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(116, 237);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 19);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Họ tên:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(116, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 19);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Mã:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(116, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 19);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Chức vụ:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(185, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "THÔNG TIN CÁ NHÂN";
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.chkHienMatKhau);
+            this.panelControl2.Controls.Add(this.btnHuy);
+            this.panelControl2.Controls.Add(this.btnLuu);
+            this.panelControl2.Controls.Add(this.txtMatKhauMoi);
+            this.panelControl2.Controls.Add(this.txtNhapLaiMK);
+            this.panelControl2.Controls.Add(this.txtMatKhauHT);
+            this.panelControl2.Controls.Add(this.label6);
+            this.panelControl2.Controls.Add(this.label7);
+            this.panelControl2.Controls.Add(this.label8);
+            this.panelControl2.Controls.Add(this.label2);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(645, 0);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(541, 557);
+            this.panelControl2.TabIndex = 1;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.Appearance.Options.UseForeColor = true;
+            this.btnHuy.Location = new System.Drawing.Point(345, 321);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 27);
+            this.btnHuy.TabIndex = 14;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Appearance.Options.UseForeColor = true;
+            this.btnLuu.Location = new System.Drawing.Point(175, 321);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 27);
+            this.btnLuu.TabIndex = 13;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // txtMatKhauMoi
             // 
@@ -227,31 +245,27 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Nhập mật khẩu hiện tại:";
             // 
-            // btnLuu
+            // label2
             // 
-            this.btnLuu.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnLuu.Appearance.Options.UseFont = true;
-            this.btnLuu.Appearance.Options.UseForeColor = true;
-            this.btnLuu.Location = new System.Drawing.Point(153, 321);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 27);
-            this.btnLuu.TabIndex = 13;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(219, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 23);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "ĐỔI MẬT KHẨU";
             // 
-            // btnHuy
+            // chkHienMatKhau
             // 
-            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.btnHuy.Appearance.Options.UseFont = true;
-            this.btnHuy.Appearance.Options.UseForeColor = true;
-            this.btnHuy.Location = new System.Drawing.Point(302, 321);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 27);
-            this.btnHuy.TabIndex = 14;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.chkHienMatKhau.AutoSize = true;
+            this.chkHienMatKhau.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkHienMatKhau.Location = new System.Drawing.Point(244, 272);
+            this.chkHienMatKhau.Name = "chkHienMatKhau";
+            this.chkHienMatKhau.Size = new System.Drawing.Size(108, 20);
+            this.chkHienMatKhau.TabIndex = 35;
+            this.chkHienMatKhau.Text = "Hiện mật khẩu";
+            this.chkHienMatKhau.UseVisualStyleBackColor = true;
+            this.chkHienMatKhau.CheckedChanged += new System.EventHandler(this.chkHienMatKhau_CheckedChanged);
             // 
             // frmDoiMatKhau
             // 
@@ -266,12 +280,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtChucVu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtChucVu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHoTen.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauMoi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhapLaiMK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatKhauHT.Properties)).EndInit();
@@ -299,5 +313,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox chkHienMatKhau;
     }
 }

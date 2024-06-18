@@ -642,7 +642,7 @@
             // 
             this.panelControl1.Controls.Add(this.panelControl4);
             this.panelControl1.Controls.Add(this.panelControl3);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelControl1.Enabled = false;
             this.panelControl1.Location = new System.Drawing.Point(770, 202);
             this.panelControl1.Name = "panelControl1";

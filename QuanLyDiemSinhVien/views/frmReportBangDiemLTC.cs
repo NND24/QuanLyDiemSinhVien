@@ -10,6 +10,10 @@ namespace QuanLyDiemSinhVien.views
         public frmReportBangDiemLTC()
         {
             InitializeComponent();
+            cmbNienKhoa.SelectedIndexChanged += cmbNienKhoa_SelectedIndexChanged;
+            cmbHocKy.SelectedIndexChanged += cmbHocKy_SelectedIndexChanged;
+            cmbMonHoc.SelectedIndexChanged += cmbMonHoc_SelectedIndexChanged;
+            cmbNhom.SelectedIndexChanged += cmbKhoa_SelectedIndexChanged;
         }
 
         private void frmReportBangDiemLTC_Load(object sender, System.EventArgs e)
@@ -120,7 +124,7 @@ namespace QuanLyDiemSinhVien.views
             }
             else
             {
-                ReportBangDiemMonHoc rpt = new ReportBangDiemMonHoc(cmbNienKhoa.Text, int.Parse(cmbHocKy.Text), cmbMonHoc.Text, int.Parse(cmbNhom.Text));
+                ReportBangDiemMonHoc rpt = new ReportBangDiemMonHoc(cmbNienKhoa.Text, int.Parse(cmbHocKy.Text), cmbMonHoc.SelectedValue.ToString(), int.Parse(cmbNhom.Text));
 
                 rpt.lblKhoa.Text = cmbKhoa.Text.ToUpper();
                 rpt.lblNienKhoa.Text = cmbNienKhoa.Text;
