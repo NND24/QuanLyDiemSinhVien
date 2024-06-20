@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemDiem));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblKhoa = new System.Windows.Forms.Label();
+            this.lblLop = new System.Windows.Forms.Label();
+            this.lblHoTen = new System.Windows.Forms.Label();
+            this.lblMaSV = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.gridControlSinhVien = new DevExpress.XtraGrid.GridControl();
+            this.gcXemDiem = new DevExpress.XtraGrid.GridControl();
             this.gridViewSinhVien = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlSinhVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcXemDiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,10 +64,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Lavender;
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.lblKhoa);
+            this.panel4.Controls.Add(this.lblLop);
+            this.panel4.Controls.Add(this.lblHoTen);
+            this.panel4.Controls.Add(this.lblMaSV);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label8);
@@ -79,45 +79,45 @@
             this.panel4.Size = new System.Drawing.Size(1186, 132);
             this.panel4.TabIndex = 0;
             // 
-            // label14
+            // lblKhoa
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(205, 97);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 15);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "lblKhoa";
+            this.lblKhoa.AutoSize = true;
+            this.lblKhoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhoa.Location = new System.Drawing.Point(205, 97);
+            this.lblKhoa.Name = "lblKhoa";
+            this.lblKhoa.Size = new System.Drawing.Size(49, 15);
+            this.lblKhoa.TabIndex = 8;
+            this.lblKhoa.Text = "lblKhoa";
             // 
-            // label13
+            // lblLop
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(205, 77);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 15);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "lblLop";
+            this.lblLop.AutoSize = true;
+            this.lblLop.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLop.Location = new System.Drawing.Point(205, 77);
+            this.lblLop.Name = "lblLop";
+            this.lblLop.Size = new System.Drawing.Size(41, 15);
+            this.lblLop.TabIndex = 7;
+            this.lblLop.Text = "lblLop";
             // 
-            // label12
+            // lblHoTen
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(205, 57);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 15);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "lblHoTen";
+            this.lblHoTen.AutoSize = true;
+            this.lblHoTen.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoTen.Location = new System.Drawing.Point(205, 57);
+            this.lblHoTen.Name = "lblHoTen";
+            this.lblHoTen.Size = new System.Drawing.Size(56, 15);
+            this.lblHoTen.TabIndex = 6;
+            this.lblHoTen.Text = "lblHoTen";
             // 
-            // label11
+            // lblMaSV
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(205, 37);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 15);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "lblMaSV";
+            this.lblMaSV.AutoSize = true;
+            this.lblMaSV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaSV.Location = new System.Drawing.Point(205, 37);
+            this.lblMaSV.Name = "lblMaSV";
+            this.lblMaSV.Size = new System.Drawing.Size(53, 15);
+            this.lblMaSV.TabIndex = 5;
+            this.lblMaSV.Text = "lblMaSV";
             // 
             // label10
             // 
@@ -171,27 +171,27 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.gridControlSinhVien);
+            this.panel2.Controls.Add(this.gcXemDiem);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 132);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1186, 425);
             this.panel2.TabIndex = 11;
             // 
-            // gridControlSinhVien
+            // gcXemDiem
             // 
-            this.gridControlSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlSinhVien.Location = new System.Drawing.Point(0, 0);
-            this.gridControlSinhVien.MainView = this.gridViewSinhVien;
-            this.gridControlSinhVien.Name = "gridControlSinhVien";
-            this.gridControlSinhVien.Size = new System.Drawing.Size(1186, 425);
-            this.gridControlSinhVien.TabIndex = 1;
-            this.gridControlSinhVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gcXemDiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcXemDiem.Location = new System.Drawing.Point(0, 0);
+            this.gcXemDiem.MainView = this.gridViewSinhVien;
+            this.gcXemDiem.Name = "gcXemDiem";
+            this.gcXemDiem.Size = new System.Drawing.Size(1186, 425);
+            this.gcXemDiem.TabIndex = 1;
+            this.gcXemDiem.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewSinhVien});
             // 
             // gridViewSinhVien
             // 
-            this.gridViewSinhVien.GridControl = this.gridControlSinhVien;
+            this.gridViewSinhVien.GridControl = this.gcXemDiem;
             this.gridViewSinhVien.Name = "gridViewSinhVien";
             // 
             // barLargeButtonItem2
@@ -223,7 +223,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlSinhVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcXemDiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewSinhVien)).EndInit();
             this.ResumeLayout(false);
 
@@ -232,7 +232,7 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraGrid.GridControl gridControlSinhVien;
+        private DevExpress.XtraGrid.GridControl gcXemDiem;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewSinhVien;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem2;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem3;
@@ -242,9 +242,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblKhoa;
+        private System.Windows.Forms.Label lblLop;
+        private System.Windows.Forms.Label lblHoTen;
+        private System.Windows.Forms.Label lblMaSV;
     }
 }
