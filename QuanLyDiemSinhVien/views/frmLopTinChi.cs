@@ -31,6 +31,7 @@ namespace QuanLyDiemSinhVien.views
             cmbKhoa.SelectedIndex = Program.mPhongBan;
             loadCmbMonHoc();
             loadCmbGiangVien();
+            loadCmbNienKhoa();
 
             if (Program.mGroup == "PGV")
             {
@@ -62,6 +63,22 @@ namespace QuanLyDiemSinhVien.views
             }
         }
 
+        private void loadCmbNienKhoa()
+        {
+            string cmd = "EXEC SP_LAY_DS_NIENKHOA";
+            DataTable dt = Program.ExecSqlDataTable(cmd);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                cmbNienKhoa.DataSource = dt;
+                cmbNienKhoa.DisplayMember = "NIENKHOA"; // Trường hiển thị
+                cmbNienKhoa.ValueMember = "NIENKHOA";    // Trường giá trị
+            }
+            else
+            {
+                cmbNienKhoa.DataSource = null;
+            }
+        }
         private void loadCmbGiangVien()
         {
             string cmd = "EXEC SP_LAY_DS_TATCA_GIANGVIEN";
@@ -163,10 +180,10 @@ namespace QuanLyDiemSinhVien.views
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (txtNienKhoa.Text.Trim() == "")
+            if (cmbNienKhoa.Text.Trim() == "")
             {
                 MessageBox.Show("vui lòng điền niên khóa!", "", MessageBoxButtons.OK);
-                txtNienKhoa.Focus();
+                cmbNienKhoa.Focus();
                 return;
             }
             if (seHocKy.Text.Trim() == "" || seHocKy.Text == "0")
