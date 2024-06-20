@@ -49,7 +49,7 @@
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.gridViewLop = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMALTC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ma = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNIENKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOCKY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -75,11 +75,11 @@
             this.cmbMonHoc = new System.Windows.Forms.ComboBox();
             this.cmbGiangVien = new System.Windows.Forms.ComboBox();
             this.panelLTC = new DevExpress.XtraEditors.PanelControl();
+            this.cmbNienKhoa = new System.Windows.Forms.ComboBox();
             this.ceHuyLop = new DevExpress.XtraEditors.CheckEdit();
             this.txtMaGiangVien = new DevExpress.XtraEditors.TextEdit();
             this.txtMaMonHoc = new DevExpress.XtraEditors.TextEdit();
             this.seNhom = new DevExpress.XtraEditors.SpinEdit();
-            this.txtNienKhoa = new DevExpress.XtraEditors.TextEdit();
             this.seSoSVToiThieu = new DevExpress.XtraEditors.SpinEdit();
             this.seHocKy = new DevExpress.XtraEditors.SpinEdit();
             this.txtMaKhoa = new DevExpress.XtraEditors.TextEdit();
@@ -103,7 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaGiangVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaMonHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seNhom.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seSoSVToiThieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.seHocKy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).BeginInit();
@@ -235,7 +234,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 575);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 578);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1186, 0);
             // 
@@ -245,7 +244,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 535);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 538);
             // 
             // barDockControlRight
             // 
@@ -253,7 +252,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1186, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 535);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 538);
             // 
             // panel1
             // 
@@ -305,7 +304,7 @@
             // gridViewLop
             // 
             this.gridViewLop.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMALTC,
+            this.Ma,
             this.colNIENKHOA,
             this.colHOCKY,
             this.colMAMH,
@@ -317,12 +316,12 @@
             this.gridViewLop.GridControl = this.gcLopTinChi;
             this.gridViewLop.Name = "gridViewLop";
             // 
-            // colMALTC
+            // Ma
             // 
-            this.colMALTC.FieldName = "MALTC";
-            this.colMALTC.Name = "colMALTC";
-            this.colMALTC.Visible = true;
-            this.colMALTC.VisibleIndex = 0;
+            this.Ma.FieldName = "MALTC";
+            this.Ma.Name = "Ma";
+            this.Ma.Visible = true;
+            this.Ma.VisibleIndex = 0;
             // 
             // colNIENKHOA
             // 
@@ -536,11 +535,11 @@
             // panelLTC
             // 
             this.panelLTC.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelLTC.Controls.Add(this.cmbNienKhoa);
             this.panelLTC.Controls.Add(this.ceHuyLop);
             this.panelLTC.Controls.Add(this.txtMaGiangVien);
             this.panelLTC.Controls.Add(this.txtMaMonHoc);
             this.panelLTC.Controls.Add(this.seNhom);
-            this.panelLTC.Controls.Add(this.txtNienKhoa);
             this.panelLTC.Controls.Add(this.seSoSVToiThieu);
             this.panelLTC.Controls.Add(this.seHocKy);
             this.panelLTC.Controls.Add(this.txtMaKhoa);
@@ -561,8 +560,18 @@
             this.panelLTC.Enabled = false;
             this.panelLTC.Location = new System.Drawing.Point(0, 249);
             this.panelLTC.Name = "panelLTC";
-            this.panelLTC.Size = new System.Drawing.Size(1186, 326);
+            this.panelLTC.Size = new System.Drawing.Size(1186, 329);
             this.panelLTC.TabIndex = 6;
+            // 
+            // cmbNienKhoa
+            // 
+            this.cmbNienKhoa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLTC, "NIENKHOA", true));
+            this.cmbNienKhoa.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNienKhoa.FormattingEnabled = true;
+            this.cmbNienKhoa.Location = new System.Drawing.Point(725, 50);
+            this.cmbNienKhoa.Name = "cmbNienKhoa";
+            this.cmbNienKhoa.Size = new System.Drawing.Size(271, 27);
+            this.cmbNienKhoa.TabIndex = 41;
             // 
             // ceHuyLop
             // 
@@ -617,19 +626,9 @@
             this.seNhom.Properties.Appearance.Options.UseFont = true;
             this.seNhom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.seNhom.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.seNhom.Size = new System.Drawing.Size(271, 26);
             this.seNhom.TabIndex = 37;
-            // 
-            // txtNienKhoa
-            // 
-            this.txtNienKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "NIENKHOA", true));
-            this.txtNienKhoa.Location = new System.Drawing.Point(725, 48);
-            this.txtNienKhoa.MenuManager = this.barManager1;
-            this.txtNienKhoa.Name = "txtNienKhoa";
-            this.txtNienKhoa.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNienKhoa.Properties.Appearance.Options.UseFont = true;
-            this.txtNienKhoa.Size = new System.Drawing.Size(271, 26);
-            this.txtNienKhoa.TabIndex = 36;
             // 
             // seSoSVToiThieu
             // 
@@ -738,7 +737,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 575);
+            this.ClientSize = new System.Drawing.Size(1186, 578);
             this.Controls.Add(this.panelLTC);
             this.Controls.Add(this.gcLopTinChi);
             this.Controls.Add(this.panel1);
@@ -763,7 +762,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaGiangVien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaMonHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seNhom.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNienKhoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seSoSVToiThieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.seHocKy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).EndInit();
@@ -810,7 +808,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraGrid.Columns.GridColumn colMALTC;
+        private DevExpress.XtraGrid.Columns.GridColumn Ma;
         private DevExpress.XtraGrid.Columns.GridColumn colNIENKHOA;
         private DevExpress.XtraGrid.Columns.GridColumn colHOCKY;
         private DevExpress.XtraGrid.Columns.GridColumn colMAMH;
@@ -834,9 +832,9 @@
         private DevExpress.XtraEditors.TextEdit txtMaGiangVien;
         private DevExpress.XtraEditors.TextEdit txtMaMonHoc;
         private DevExpress.XtraEditors.SpinEdit seNhom;
-        private DevExpress.XtraEditors.TextEdit txtNienKhoa;
         private DevExpress.XtraEditors.SpinEdit seSoSVToiThieu;
         private DevExpress.XtraEditors.SpinEdit seHocKy;
         private System.Windows.Forms.BindingSource fKDangKyLopTinChiBindingSource;
+        private System.Windows.Forms.ComboBox cmbNienKhoa;
     }
 }
