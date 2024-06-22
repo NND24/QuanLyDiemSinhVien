@@ -671,6 +671,7 @@
             // txtMaKhoa
             // 
             this.txtMaKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "MAKHOA", true));
+            this.txtMaKhoa.Enabled = false;
             this.txtMaKhoa.Location = new System.Drawing.Point(263, 48);
             this.txtMaKhoa.MenuManager = this.barManager1;
             this.txtMaKhoa.Name = "txtMaKhoa";
@@ -715,6 +716,7 @@
             this.tableAdapterManager.KHOATableAdapter = null;
             this.tableAdapterManager.LOPTableAdapter = null;
             this.tableAdapterManager.LOPTINCHITableAdapter = this.LOPTINCHITableAdapter;
+            this.tableAdapterManager.MONHOC1TableAdapter = null;
             this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QuanLyDiemSinhVien.QLDSV_HTCDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;

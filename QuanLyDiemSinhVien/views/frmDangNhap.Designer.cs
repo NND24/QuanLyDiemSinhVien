@@ -86,7 +86,7 @@
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.EditValue = "HTT";
+            this.txtTenDangNhap.EditValue = "";
             this.txtTenDangNhap.Location = new System.Drawing.Point(203, 246);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,7 +96,7 @@
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.EditValue = "123456789";
+            this.txtMatKhau.EditValue = "";
             this.txtMatKhau.Location = new System.Drawing.Point(203, 302);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

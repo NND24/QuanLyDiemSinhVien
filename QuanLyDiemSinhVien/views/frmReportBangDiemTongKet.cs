@@ -1,8 +1,7 @@
-﻿using System.Windows.Forms;
-using System.Data;
-using DevExpress.XtraReports.UI;
-using System;
+﻿using DevExpress.XtraReports.UI;
 using QuanLyDiemSinhVien.reports;
+using System;
+using System.Data;
 
 namespace QuanLyDiemSinhVien.views
 {
@@ -29,23 +28,25 @@ namespace QuanLyDiemSinhVien.views
 
         private void cmbKhoa_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if(cmbKhoa.SelectedIndex == 0)
+            if (cmbKhoa.SelectedIndex == 0)
             {
-                loadCmbLop("CNTT");
-                
-            } else if (cmbKhoa.SelectedIndex == 1)
+                loadCmbLop("Công Nghệ Thông Tin");
+
+            }
+            else
             {
-                loadCmbLop("VT");
+                loadCmbLop("Viễn Thông");
             }
         }
 
         private void loadCmbLop(String tenKhoa)
         {
-            String maKhoa;
-            if (tenKhoa.Equals("CÔNG NGHỆ THÔNG TIN"))
+            String maKhoa = "";
+            if (tenKhoa.Equals("Công Nghệ Thông Tin"))
             {
                 maKhoa = "CNTT";
-            } else
+            }
+            else if (tenKhoa.Equals("Viễn Thông"))
             {
                 maKhoa = "VT";
             }
@@ -67,12 +68,17 @@ namespace QuanLyDiemSinhVien.views
         {
             ReportBangDiemTongKet rpt = new ReportBangDiemTongKet(cmbLop.Text);
 
-            
+
             rpt.lblLop.Text = cmbLop.Text;
             rpt.lblKhoaHoc.Text = layKhoaHoc(cmbLop.Text);
             rpt.lblKhoa.Text = cmbKhoa.Text;
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
