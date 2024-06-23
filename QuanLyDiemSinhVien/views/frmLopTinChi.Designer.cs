@@ -514,6 +514,7 @@
             // 
             // cmbMonHoc
             // 
+            this.cmbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonHoc.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmbMonHoc.FormattingEnabled = true;
             this.cmbMonHoc.Location = new System.Drawing.Point(263, 133);
@@ -524,6 +525,7 @@
             // 
             // cmbGiangVien
             // 
+            this.cmbGiangVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGiangVien.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cmbGiangVien.FormattingEnabled = true;
             this.cmbGiangVien.Location = new System.Drawing.Point(263, 173);
@@ -671,6 +673,7 @@
             // txtMaKhoa
             // 
             this.txtMaKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLTC, "MAKHOA", true));
+            this.txtMaKhoa.Enabled = false;
             this.txtMaKhoa.Location = new System.Drawing.Point(263, 48);
             this.txtMaKhoa.MenuManager = this.barManager1;
             this.txtMaKhoa.Name = "txtMaKhoa";
