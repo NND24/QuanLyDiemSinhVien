@@ -218,11 +218,14 @@ namespace QuanLyDiemSinhVien.views
             {
                 if (MessageBox.Show("Dữ liệu chưa được cập nhật! Bạn có muốn thoát không? ", "THÔNG BÁO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
-                    panelControlNhapTT.Enabled = btnBatDau.Enabled = true;
+                    cmbNienKhoa.Enabled = cmbHocKy.Enabled = cmbMonHoc.Enabled = cmbNhom.Enabled = btnBatDau.Enabled = true;
                     btnCapNhat.Enabled = false;
                     cmbKhoa.Enabled = true;
                     this.gc_DSSV_DangKy.DataSource = null;
                     gc_DSSV_DangKy.Enabled = false;
+
+                    this.btnCapNhat.BackColor = System.Drawing.SystemColors.ButtonShadow;
+                    this.btnBatDau.BackColor = System.Drawing.SystemColors.MenuHighlight;
                 }
             }
             else

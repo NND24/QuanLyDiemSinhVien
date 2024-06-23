@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVien.views
@@ -145,7 +146,7 @@ namespace QuanLyDiemSinhVien.views
                         MessageBox.Show("Không thể xóa lớp tín chỉ này do đã có sinh viên đăng ký", "",
                                     MessageBoxButtons.OK);
                         return;
-                    }  
+                    }
                     if (bdsLTC.Count == 0) btnXoa.Enabled = false; ;
                 }
                 catch (Exception ex)
@@ -182,39 +183,39 @@ namespace QuanLyDiemSinhVien.views
         {
             if (cmbNienKhoa.Text.Trim() == "")
             {
-                MessageBox.Show("vui lòng điền niên khóa!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng điền niên khóa!", "", MessageBoxButtons.OK);
                 cmbNienKhoa.Focus();
                 return;
             }
             if (seHocKy.Text.Trim() == "" || seHocKy.Text == "0")
             {
-                MessageBox.Show("vui lòng chọn học kỳ!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn học kỳ!", "", MessageBoxButtons.OK);
                 seHocKy.Focus();
                 return;
             }
 
             if (txtMaMonHoc.Text.Trim() == "")
             {
-                MessageBox.Show("vui lòng chọn môn học!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn môn học!", "", MessageBoxButtons.OK);
                 cmbMonHoc.Focus();
                 return;
             }
             if (txtMaGiangVien.Text.Trim() == "")
             {
-                MessageBox.Show("vui lòng chọn giáo viên!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn giáo viên!", "", MessageBoxButtons.OK);
                 cmbGiangVien.Focus();
                 return;
             }
             if (seNhom.Text.Trim() == "0")
             {
-                MessageBox.Show("vui lòng chọn nhóm!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn nhóm!", "", MessageBoxButtons.OK);
                 seNhom.Focus();
                 return;
             }
 
             if (seSoSVToiThieu.Text.Trim() == "")
             {
-                MessageBox.Show("vui lòng nhập số sinh viên tối thiểu!", "", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng nhập số sinh viên tối thiểu!", "", MessageBoxButtons.OK);
                 seSoSVToiThieu.Focus();
                 return;
             }
@@ -226,6 +227,18 @@ namespace QuanLyDiemSinhVien.views
                 this.LOPTINCHITableAdapter.Update(this.QLDSV_HTCDataSet.LOPTINCHI);
                 gcLopTinChi.Enabled = true;
 
+            }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627) // SQL Server error code for unique constraint violation
+                {
+                    MessageBox.Show("Lỗi ghi lớp: Lớp tín chỉ đã tồn tại.", "", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi ghi lớp: " + ex.Message, "", MessageBoxButtons.OK);
+                }
+                return;
             }
             catch (Exception ex)
             {
