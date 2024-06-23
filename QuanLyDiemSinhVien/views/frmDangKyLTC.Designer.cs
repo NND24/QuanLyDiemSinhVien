@@ -376,6 +376,7 @@
             // 
             // txtGiangVien
             // 
+            this.txtGiangVien.Enabled = false;
             this.txtGiangVien.Location = new System.Drawing.Point(226, 106);
             this.txtGiangVien.Name = "txtGiangVien";
             this.txtGiangVien.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -385,6 +386,7 @@
             // 
             // txtMonHoc
             // 
+            this.txtMonHoc.Enabled = false;
             this.txtMonHoc.Location = new System.Drawing.Point(226, 63);
             this.txtMonHoc.Name = "txtMonHoc";
             this.txtMonHoc.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -394,6 +396,7 @@
             // 
             // txtMaLopTinChi
             // 
+            this.txtMaLopTinChi.Enabled = false;
             this.txtMaLopTinChi.Location = new System.Drawing.Point(226, 20);
             this.txtMaLopTinChi.Name = "txtMaLopTinChi";
             this.txtMaLopTinChi.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
